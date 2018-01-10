@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Floreria Euforia</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Floreria Euforia
                     </a>
                 </div>
 
@@ -37,14 +37,27 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
+                        @auth
+                            <!--Pestañas de usuario normal-->
+                            <li class="hidden-sm"><a name="inicio" href="#">Inicio</a></li>
+                            <li><a name="inventario" href="#">Inventario</a></li>
+                            <li><a name="merma" href="#">Merma</a></li>
+                            <li><a name="Repartidor" href="#">Repartidor</a></li>
+                            <li><a href="#">Florista</a></li>
+
+                            <!--Pestañas de usuario administrador-->
+                            @if(Auth::user()->rol=='admin')
+                                <li><a name="Reportes" href="#">Reportes</a></li>
+                                <li><a name="Panel" href="#"><div class="hidden-sm">Panel de usuarios</div><div class="visible-sm">Panel</div></a></li>
+                            @endif
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">Iniciar sesion</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
