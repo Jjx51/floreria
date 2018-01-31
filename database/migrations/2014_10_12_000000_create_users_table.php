@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('username')->unique();
-            $table->enum('rol',['user','admin']);
+            $table->enum('rol',['user','admin','florista','repartidor']);
         });
     }
 
