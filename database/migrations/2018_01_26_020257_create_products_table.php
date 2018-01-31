@@ -14,9 +14,11 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('codigo',15)->unique();
-            $table->string('NombreProducto',30);
+            $table->string('NombreProducto');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('category_products')->onupdate('cascade');
             $table->integer('Cantidad');
             $table->integer('merma');
             $table->timestamps();
