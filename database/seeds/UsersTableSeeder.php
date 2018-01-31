@@ -14,19 +14,19 @@ class UsersTableSeeder extends Seeder
         factory(App\User::class)->create([
         	'name'=>'Jorge Nuñez',
             'username'=>'jjx51',
-        	'rol'=>'admin',
+        	'rol'=>'user',
         	'email'=>'jjx51@outlook.com',
         	'password'=>bcrypt('admin')
         ]);
         factory(App\User::class)->create([
             'name'=>'Miguel Jimenez',
             'username'=>'kroer17',
-            'rol'=>'user',
+            'rol'=>'admin',
             'email'=>'kroer17@gmail.com',
             'password'=>bcrypt('admin')
         ]);
 
-        factory(App\User::class,2)->create();
+        factory(App\User::class,5)->create();
 
     }
 }
