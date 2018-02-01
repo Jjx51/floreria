@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('NombreProducto');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('category_products')->onupdate('cascade');
-            $table->integer('Cantidad');
+            $table->float('Cantidad', 8, 2);
             $table->integer('merma');
             $table->timestamps();
         });
