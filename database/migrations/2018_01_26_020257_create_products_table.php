@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('NombreProducto');
+            $table->string('NombreProducto')->unique();
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('category_products')->onupdate('cascade');
             $table->float('Cantidad', 8, 2);

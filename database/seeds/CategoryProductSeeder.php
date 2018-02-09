@@ -16,10 +16,13 @@ class CategoryProductSeeder extends Seeder
             'name'=>'Flores'
         ]);
         CategoryProduct::create([
-            'name'=>'Bases'
+            'name'=>'Tallos'
         ]);
         CategoryProduct::create([
-            'name'=>'Floreros'
+            'name'=>'Rollos'
+        ]);
+        CategoryProduct::create([
+            'name'=>'Bases'
         ]);
         CategoryProduct::create([
             'name'=>'Papel'
