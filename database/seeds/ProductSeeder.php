@@ -269,12 +269,7 @@ class ProductSeeder extends Seeder
             'Cantidad' => 12,
             'merma' => 0
         ]);
-        Product::create([
-            'NombreProducto'=>'Tallo de Hortencia Verde',
-            'category_id' => 2,
-            'Cantidad' => 12,
-            'merma' => 0
-        ]);
+
         Product::create([
             'NombreProducto'=>'Tallo de Clavelina Blanca',
             'category_id' => 2,
