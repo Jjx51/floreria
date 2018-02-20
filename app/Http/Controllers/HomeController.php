@@ -30,6 +30,14 @@ class HomeController extends Controller
         return view('home.venta',compact('id'));
     }
 
+    public function mostrador($id){
+        return view('home.mostrador',compact('id'));
+    }
+
+    public function pedido($id){
+        return view('home.pedido',compact('id'));
+    }
+
 
 
 }
