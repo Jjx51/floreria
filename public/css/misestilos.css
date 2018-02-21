@@ -1,0 +1,52 @@
+*{
+
+}
+div.dataTables_wrapper {
+        margin-bottom: 3em;
+    }
+
+div.pad2{
+    padding-left:2px;
+}
+
+select{
+    color: black;
+}
+
+
+.example1{
+    background-color: rgba(77,133,159,.85);
+    border-style: solid;
+    border-color: #001823;
+    color: black;
+}
+
+.borde-especial{
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(212, 190, 50, 1) ;
+}
+
+.especial{
+    background-color: rgba(212, 190, 50, 0.8);
+    background: rgba(212, 190, 50, 0.8);
+}
+
+.color-tabla{
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(249,249,249,1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    color: black;
+}
+
+.colorw{
+    color: white;
+}
+
+.colorb{
+    color: black;
+}
