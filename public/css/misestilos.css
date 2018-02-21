@@ -50,3 +50,64 @@ input{
 .colorb{
     color: black;
 }
+/*Otro css*/
+*{
+    
+}
+header{
+    margin-top: 50px;
+}
+
+body  {
+    background-color: #cccccc;
+    height: 200%;
+    width: 100%;
+}
+.margen-inferior{
+    margin-bottom: 10px;
+}
+
+.margen-inferior2{
+    margin-bottom: 20px;
+}
+
+.margen-inferior3{
+    margin-bottom: 30px;
+}
+
+.margen-superior{
+    margin-top: 10px;
+}
+
+.margen-superior2{
+    margin-top: 20px;
+}
+
+.margen-derecho{
+    margin-right: 20px;
+}
+.margen-izquierdo{
+    margin-left: 10px;
+}
+
+
+
+.letra150{
+    font-size: 200%;
+}
+
+.letra20{
+    font-size: 20px;
+}
+
+.borde{
+    border-style: solid;
+    border-color: black;
+}
+
+textarea {
+    resize: none;
+}
+
+
+

@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/inicio', 'HomeController@index')->name('inicio');
 
+/*Rutas de home*/
 Route::get('/inicio/venta/{id}', 'HomeController@venta')->name('inicio.venta')->where(['id'=>'[\d]+']);
 Route::get('/inicio/mostrador/{id}', 'HomeController@venta')->name('inicio.mostrador')->where(['id'=>'[\d]+']);
 Route::get('/inicio/pedido/{id}', 'HomeController@venta')->name('inicio.pedido')->where(['id'=>'[\d]+']);
+
+/*ruta de prueba*/
+Route::get('/prueba', function () {
+    return view('merma.index');
+});

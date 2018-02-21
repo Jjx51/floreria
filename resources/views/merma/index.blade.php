@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
@@ -93,6 +93,7 @@
 			    </table>
 			</div>
   		</div>
+  		
         <div class="row margen-inferior margen-superior">				
 		    <div class="col-sm-offset-2 col-sm-4">
 		        <button  type="button" class="btn btn-default btn-lg btn-block">Añadir</button>
