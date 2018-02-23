@@ -23,6 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home.index');
     }
+
+    public function venta($id){
+        return view('home.venta',compact('id'));
+    }
+
+    public function mostrador($id){
+        return view('home.mostrador',compact('id'));
+    }
+
+    public function pedido($id){
+        return view('home.pedido',compact('id'));
+    }
+
+
+
 }

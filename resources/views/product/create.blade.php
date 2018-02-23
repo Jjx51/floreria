@@ -1,26 +1,26 @@
 @extends('layouts.app')
 
 @section('head')
-<link href="{{ asset('css/login.css') }}" rel="stylesheet">
 
 @endsection
+
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default panel-centrado">
-                <div class="panel-heading">Inicio de sesión</div>
+            <div class="panel panel-default">
+                <div class="panel-heading text-center lead"><strong>Crear Producto</strong></div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Usuario</label>
+                            <label for="productoname" class="col-md-4 control-label">Nombre </label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
+                                <input id="productoname" type="text" class="form-control" name="productoname" value="{{ old('username') }}" required autofocus>
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">
@@ -31,10 +31,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="precio" class="col-md-4 control-label">Precio </label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="precio" type="number" class="form-control" name="precio" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -45,19 +45,20 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recuerdáme
-                                    </label>
-                                </div>
+                           <label for="categoria" class="col-md-4 control-label">Categoria </label>
+                            <div class="col-md-6">                                
+                                <select name="select" class="form-control"> 
+                                  <option value="1" >Categoria 1</option> 
+                                  <option value="2" >Categoria 2</option>
+                                  <option value="3" >Categoria 3</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Ingresar
+                                    Registrar nuevo producto
                                 </button>
                             </div>
                         </div>
@@ -68,4 +69,9 @@
         </div>
     </div>
 </div>
+
+@endsection
+
+@section('javascript')
+
 @endsection

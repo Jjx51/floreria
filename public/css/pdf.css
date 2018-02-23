@@ -1,0 +1,117 @@
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}/*Codigo de encabezado*/
+.col-md-12 {
+    width: 100%;
+} 
+.empresa {
+  border-top: 1px solid  #5D6975;
+  border-bottom: 1px solid  #5D6975;
+  color: #5D6975;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+}/*Nombre de la compañia*/
+#logo {
+  text-align: center;
+  margin-bottom: 10px;
+}/*Codigo logo*/
+
+.box {
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: rgba(201,201,201);
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+ 
+}
+
+
+.box-header .box-title {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 10px;
+
+}
+
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-color: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.table-bordered {
+    border: 1px solid rgba(201,201,201);
+    
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+table {
+    background-color: white;
+}
+
+ .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th,.table-bordered>thead>tr>th, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border-top: 1px solid rgba(201,201,201); 
+}
+.text-center{
+ text-align: center;
+}
+.center{
+ text-align:center;
+}
+.ancho20{
+    width: 20%;
+}
+.ancho25{
+    width: 25%;
+}
+.ancho15{
+    width: 15%;
+}
+.anch30{
+    width: 30%;
+}
+.ancho50{
+    width: 50%;
+}
+.letra-negra{
+  font-weight:   bold;
+}
+#logo {
+  width: 100px;
+  height: 100px;
+}
+#letra{
+  color: #5D6975;
+  font-size: 1em;
+  font-weight: normal;
+}
