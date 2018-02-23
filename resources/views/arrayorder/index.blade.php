@@ -2,623 +2,256 @@
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
 @endsection
 
 
 @section('content')
 	<div class="container">
-		<h1>Repartidor</h1>
+		<h1>Seleccionar productos manualmente</h1>
 	</div>
 
-		<div class="container">
-			<h3 class="text-center">Bloque1</h3>
-		<div class="row">
+	<div class="container">
+  		<div class="row ">
   			<div class="table-responsive color-tabla margen-superior">
-				<table id="example" class="table table-striped table-bordered text-center">
+			  	<table id="example" class="table table-striped table-bordered text-center " cellspacing="0" width="100%">
 			        <thead>
 			            <tr>
-			                <th class="text-center">#Folio</th>
-			                <th class="text-center">Direccion</th>
-			                <th class="text-center">Fecha</th>
-			                <th class="text-center">Hora</th>
-			                <th class="text-center">Destinatario</th>
-			                <th class="text-center">Telefono</th>
-			                <th class="text-center">Cliente</th>
-			                <th class="text-center">Estado</th>
-			                <th class="text-center">Hora de entrega</th>
+			                <th class="text-center">Añadir</th>
+			                <th class="text-center"></th>
+			                <th class="text-center">Nombre</th>
+			                <th class="text-center">Descripcion</th>
+			                <th class="text-center">Exstencia</th>
+			                <th class="text-center">Codigo</th>
+			                <th class="text-center">Imagen</th>
 			            </tr>
 			        </thead>
-			        <tfoot>
-			            <tr>
-			                <th>#Folio</th>
-			                <th>Direccion</th>
-			                <th>Fecha</th>
-			                <th>Hora</th>
-			                <th>Destinatario</th>
-			                <th>Telefono</th>
-			                <th>Cliente</th>
-			                <th>Estado</th>
-			                <th>Hora de entrega</th>
-			            </tr>
-			        </tfoot>
 			        <tbody>
-			        	<tr>
-			        		<td>#121</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
+			       		<tr>
+			        		<td>21</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Dalia</td>
+			                <td>Producto Individual</td>
+			                <td>21</td>
+			                <td>#ydt57</td>
+			                <td>
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/dalia.jpeg') }}" data-lightbox="example1">
+				                		<img class="example-image" src="{{ asset('img/full/dalia.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			        	<tr>
-			        		<td>#122</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
+
+			       		<tr>
+			        		<td>78</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo 1</td>
+			                <td>Producto Conjunto</td>
+			                <td>0</td>
+			                <td>#73hdi</td>
+			                <td>
+
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo.jpeg') }}" data-lightbox="example2">
+				                		<img class="example-image" src="{{ asset('img/full/ramo.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			            <tr class="danger">
-			                <td>#123</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#124</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
+
+			       		<tr>
+			        		<td>59</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Lilia</td>
+			                <td>Producto Individual</td>
+			                <td>21</td>
+			                <td>#83636</td>
+			                <td>
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/lilia.jpeg') }}" data-lightbox="example3">
+				                		<img class="example-image" src="{{ asset('img/full/lilia.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			        	<tr>
-			        		<td>#125</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
+
+			       		<tr>
+			        		<td>53</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo Rosas</td>
+			                <td>Producto Individual</td>
+			                <td>42</td>
+			                <td>#6kd68h</td>
+			                <td>
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo2.jpeg') }}" data-lightbox="example4">
+				                		<img class="example-image" src="{{ asset('img/full/ramo2.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			            <tr class="danger">
-			                <td>#126</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#127</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
+
+			       		<tr>
+			        		<td>45</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Margaritas Blancas</td>
+			                <td>Producto Individual</td>
+			                <td>12</td>
+			                <td>#62hds7</td>
+			                <td>
+			               		<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/margaritas_blancas.jpeg') }}" data-lightbox="example5">
+				                		<img class="example-image" src="{{ asset('img/full/margaritas_blancas.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			        	<tr>
-			        		<td>#128</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
+
+			       		<tr>
+			        		<td>63</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo 3</td>
+			                <td>Producto Individual</td>
+			                <td>93</td>
+			                <td>#7dis23</td>
+			                <td>
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo3.jpeg') }}" data-lightbox="example6">
+				                		<img class="example-image" src="{{ asset('img/full/ramo3.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			            <tr class="danger">
-			                <td>#129</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            
-			            <tr>
-			        		<td>#130</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
+
+			       		<tr>
+			        		<td>0</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo 4</td>
+			                <td>Producto Individual</td>
+			                <td>209</td>
+			                <td>#thwy65</td>
+			                <td>
+			                	<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo4.jpeg') }}" data-lightbox="example7">
+				                		<img class="example-image" src="{{ asset('img/full/ramo4.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			        	<tr>
-			        		<td>#131</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
+
+			       		<tr>
+			        		<td>72</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Rosa Azul</td>
+			                <td>Producto Individual</td>
+			                <td>0</td>
+			                <td>#ydt57</td>
+			                <td>
+								<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/rosa_azul.jpeg') }}" data-lightbox="example8">
+				                		<img class="example-image" src="{{ asset('img/full/rosa_azul.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
 			        	</tr>
-			            <tr class="danger">
-			                <td>#132</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            
+
+			       		<tr>
+			        		<td>32</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo 5</td>
+			                <td>Producto Individual</td>
+			                <td>72</td>
+			                <td>#ydt57</td>
+			                <td>
+								<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo5.jpeg') }}" data-lightbox="example9">
+				                		<img class="example-image" src="{{ asset('img/full/ramo5.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
+			        	</tr>
+
+			       		<tr>
+			        		<td>92</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Rosa Rosa</td>
+			                <td>Producto Individual</td>
+			                <td>24</td>
+			                <td>#ydt57</td>
+			                <td>
+								<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/rosa_rosa.jpeg') }}" data-lightbox="example10">
+				                		<img class="example-image" src="{{ asset('img/full/rosa_rosa.jpeg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
+			        	</tr>
+
+			       		<tr>
+			        		<td>52</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Ramo</td>
+			                <td>Producto Individual</td>
+			                <td>78</td>
+			                <td>#ydt57</td>
+			                <td>
+								<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/ramo1.jpg') }}" data-lightbox="example11">
+				                		<img class="example-image" src="{{ asset('img/full/ramo1.jpg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
+			        	</tr>
+
+			       		<tr>
+			        		<td>91</td>
+			        		<td><button type="button" class="btn btn-default">+</button></td>
+			                <td>Margarita</td>
+			                <td>Producto Individual</td>
+			                <td>9</td>
+			                <td>#ydt57</td>
+			                <td>
+								<div>
+				                	<a class="example-image-link" href="{{ asset('img/full/Margarita.jpg') }}" data-lightbox="example12">
+				                		<img class="example-image" src="{{ asset('img/full/Margarita.jpg') }}" alt="image" height="30px" width="40px" />
+				                	</a>
+				                </div>
+			                </td>
+			        	</tr>
+
 			        </tbody>
 			    </table>
 			</div>
   		</div>
-  	
-		<h3 class="text-center">Bloque 2</h3>
-		<div class="row ">
-  			<div class="table-responsive color-tabla margen-superior">
-				<table id="example2" class="table table-striped table-bordered text-center" cellspacing="0" width="100%">
-			        <thead>
-			            <tr>
-			                <th class="text-center">#Folio</th>
-			                <th class="text-center">Direccion</th>
-			                <th class="text-center">Fecha</th>
-			                <th class="text-center">Hora</th>
-			                <th class="text-center">Destinatario</th>
-			                <th class="text-center">Telefono</th>
-			                <th class="text-center">Cliente</th>
-			                <th class="text-center">Estado</th>
-			                <th class="text-center">Hora de entrega</th>
-			            </tr>
-			        </thead>
-			        <tfoot>
-			            <tr>
-			                <th>#Folio</th>
-			                <th>Direccion</th>
-			                <th>Fecha</th>
-			                <th>Hora</th>
-			                <th>Destinatario</th>
-			                <th>Telefono</th>
-			                <th>Cliente</th>
-			                <th>Estado</th>
-			                <th>Hora de entrega</th>
-			            </tr>
-			        </tfoot>
-			        <tbody>
-			        	<tr>
-			        		<td>#121</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#122</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#123</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#124</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#125</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#126</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#127</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#128</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#129</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-
-			            <tr>
-			        		<td>#130</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#131</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#132</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            
-			        </tbody>
-			    </table>
-			</div>
-  		</div>
-
-		<h3 class="text-center">Bloque 3</h3>
-		<div class="row">
-  			<div class="table-responsive color-tabla margen-superior">
-				<table id="example3" class="table table-striped table-bordered text-center" cellspacing="0" width="100%">
-			        <thead>
-			            <tr>
-			                <th class="text-center">#Folio</th>
-			                <th class="text-center">Direccion</th>
-			                <th class="text-center">Fecha</th>
-			                <th class="text-center">Hora</th>
-			                <th class="text-center">Destinatario</th>
-			                <th class="text-center">Telefono</th>
-			                <th class="text-center">Cliente</th>
-			                <th class="text-center">Estado</th>
-			                <th class="text-center">Hora de entrega</th>
-			            </tr>
-			        </thead>
-			        <tfoot>
-			            <tr>
-			                <th>#Folio</th>
-			                <th>Direccion</th>
-			                <th>Fecha</th>
-			                <th>Hora</th>
-			                <th>Destinatario</th>
-			                <th>Telefono</th>
-			                <th>Cliente</th>
-			                <th>Estado</th>
-			                <th>Hora de entrega</th>
-			            </tr>
-			        </tfoot>
-			        <tbody>
-			        	<tr>
-			        		<td>#121</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#122</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#123</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#124</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#125</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#126</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            <tr>
-			        		<td>#127</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#128</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#129</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            
-			            <tr>
-			        		<td>#130</td>
-			                <td>Av.15 Septiembre 8543 Col.Sn.Jacinto</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>America Perez</td>
-			                <td>2229087621</td>
-			                <td>Alberto Ramirez</td>
-			                <td>En ruta</td>
-			                <td>--:--</td>
-			        	</tr>
-			        	<tr>
-			        		<td>#131</td>
-			                <td>Blvrd. 14 sur 6523 Col. El pedregal</td>
-			                <td>12/09/2017</td>
-			                <td>10:21</td>
-			                <td>Julieta Estopier</td>
-			                <td>2229087621</td>
-			                <td>Jose Paredes</td>
-			                <td>Entregado</td>
-			                <td>13:45</td>
-			        	</tr>
-			            <tr class="danger">
-			                <td>#132</td>
-			                <td>Blvrd.16 Sur 6543 Col. Sn.Patagonio</td>
-			                <td>12/09/2017</td>
-			                <td>09:21</td>
-			                <td>Jesus Gracia</td>
-			                <td>2229087621</td>
-			                <td>Jesica Jimenez</td>
-			                <td><button type="button" class="btn btn btn-link " data-toggle="modal" data-target="#myModal">Entrega fallida</button></td>
-			                <td>13:00</td>
-			            </tr>
-			            
-			        </tbody>
-			    </table>
-			</div>
-  		</div>
-  	</div>
-
-
-		<div class="modal fade colorb" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			        <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">Estado Actual del Pedido</h4>
-			        </div>
-			        <div class="modal-body">
-			        	<div class="container">
-			        		<div class="row">
-					        	<div class="col-md-12">
-					        		<form>
-			  							<div class="form-group">
-			  								<div class="radio">
-												  <label>
-												    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-												    En Ruta
-												  </label>
-											</div>
-											<div class="radio">
-												  <label>
-												    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-												    Entregado
-												  </label>
-											</div>
-											<div class="radio">
-												  <label>
-												    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-												    Entrega Fallida
-												  </label>
-											</div>
-			  							</div>
-			  							<div class="col-md-6">
-			  								<div class="form-group">
-											<label for="InputNombre" style="font-size: 20px;">Nota</label>
-											<textarea class="form-control" rows="3"></textarea>
-							  			</div>
-			  							</div>
-			  							
-			  						</form>
-					        	</div>
-			        		</div>
-			        	</div>
-
-			        </div>
-			        <div class="modal-footer">
-				        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-				        <button type="button" class="btn btn-primary">Guardar</button>
-			        </div>
-			    </div>
-			</div>
+  		<div class="row row margen-superior margen-inferior">
+  			<div class="col-sm-offset-4 col-sm-4">
+		        <button  type="button" class="btn btn-default btn-lg btn-block">Cancelar</button>
+		    </div>
 		</div>
-
-
-    
+  	</div>
 
 
 @endsection
 
 @section('javascript')
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	
 	<script type="text/javascript">
-		$(document).ready(function() {
-		    $('#example').DataTable( {
-		        "language": {
-		            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-		        }
-		    } );
-		    $('#example2').DataTable( {
-		        "language": {
-		            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-		        } 
-		    } );
-
-		    $('#example3').DataTable( {
-		        "language": {
-		            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-		        }
-		    } );
-		} );
-	</script>
-
+        $(document).ready(function() {
+        $('#example').dataTable( {
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+                }
+            } );
+        } );
+    </script>
+		 
 	<script>$(document).ready(function() {
     	$('#example').DataTable();
 		} );
      </script>
-    <script>$(document).ready(function() {
-    	$('#example2').DataTable();
-		});
-    </script>
+    <script type="text/javascript" src="{{ asset('js/lightbox.js') }}"></script>
 
-    <script>$(document).ready(function() {
-    	$('#example3').DataTable();
-		});
-    </script>
 
 @endsection
