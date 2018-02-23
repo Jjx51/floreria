@@ -26,5 +26,5 @@ Route::get('/inicio/pedido/{id}', 'HomeController@venta')->name('inicio.pedido')
 
 /*ruta de prueba*/
 Route::get('/prueba', function () {
-    return view('order.index');
+    return view('arrayorder.index');
 });
