@@ -5,7 +5,7 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 margen-superior">
 
 				<div class="col-lg-4 col-md-4 col-sm-4 ">
-					<img src="img/ejemplo.jpeg " width="100%" alt="" class="img-rounded img-responsive imagen-home">
+					<img src="img/ejemplo.jpeg" width="100%" alt="" class="img-rounded img-responsive imagen-home">
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8">
 					<p>Descripcion</p>
