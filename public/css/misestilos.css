@@ -59,7 +59,7 @@ header{
 }
 
 body  {
-    background-color: #cccccc;
+    background-color: #effbff;
     height: 200%;
     width: 100%;
 }
@@ -90,6 +90,10 @@ body  {
     margin-left: 10px;
 }
 
+.margen-botones{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
 
 
 .letra150{
