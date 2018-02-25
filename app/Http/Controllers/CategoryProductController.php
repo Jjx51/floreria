@@ -21,7 +21,8 @@ class CategoryProductController extends Controller
      */
     public function create()
     {
-        return('category prodct create');
+        $CategoryProduct = new CategoryProduct;
+        return view ('CategoryProduct.create',compact('CategoryProduct'));
     }
 
     /**
@@ -32,7 +33,14 @@ class CategoryProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (CategoryProduct::create($request->all())) {
+            return redirect("/Categoryp");
+        } else {
+            //configurar mensaje de que la categoria no se guardo en el sistema
+            $CategoryProduct  = new CategoryProduct;
+            $CategoryProduct->name = $request->name;
+            return view("/CategoryProduct.create",["CategoryProduct" => $CategoryProduct]);
+        }
     }
 
     /**
