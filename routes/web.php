@@ -35,3 +35,5 @@ Route::get('/prueba', function () {
 
 /*ruta de prueba de pdf*/
 Route::get('/pdf', 'PdfController@index');
+
+Route::resource('Categoryp', 'CategoryProductController');
