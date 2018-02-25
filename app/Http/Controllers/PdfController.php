@@ -10,7 +10,7 @@ class PdfController extends Controller
     public function index(Request $request){
     	/*Se obtiene el tipo de reporte*/
     	$reportType=$request->input('reportType');
-    	$reportType='ambos';
+    	$reportType='merma';
     	/*Obtener informacion general que se pasara*/
     	$generalData = $this->getGeneralData();
 
@@ -48,7 +48,7 @@ class PdfController extends Controller
     /*Funcion para conseguir los datos que usara el reporte*/
     public function getGeneralData(){
         $data =  [
-            'fecha_inicio'      => '24/02/18' ,
+            'fecha_inicio'	=> '24/02/18' ,
             'fecha_fin'   => '24/02/18',
         ];
         return $data;

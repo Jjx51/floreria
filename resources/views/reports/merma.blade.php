@@ -16,8 +16,8 @@
       <table id="letra" class="table">
         <thead>
           <tr class="text-center">
-            <th class="ancho50">FECHA INICIO: 12/05/2017</th>
-            <th class="ancho50">FECHA FINAL: 21/05/2017</th>
+            <th class="ancho50">FECHA INICIO: {{ $generalData['fecha_inicio'] }}</th>
+            <th class="ancho50">FECHA FINAL: {{ $generalData['fecha_fin'] }}</th>
           </tr>                    
         </thead>
       </table> 
@@ -102,8 +102,8 @@
       </thead>
         <tbody>
         <tr class="text-center">
-          <td class="ancho50">Rosas</td>
-          <td class="ancho50">300</td>
+          <td class="ancho50">{{ $wasteData['mostWasteName'] }}</td>
+          <td class="ancho50">{{ $wasteData['mostWasteQuantity'] }}</td>
         </tr>
         </tbody>
       </table>
