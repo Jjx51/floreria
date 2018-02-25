@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Array extends Model
+class My_Array extends Model
 {
-    //
+    protected $table = 'arrays';
 }

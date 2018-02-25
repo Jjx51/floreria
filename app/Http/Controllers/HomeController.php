@@ -23,7 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        // validar para usuarios registrados y activos
+        //validar para productos agragados 
+        $tipoAlerta='success';
+        $titulo= 'transaccion exitosa';
+        $mensaje= 'El producto ha sido registrado';
+        return view('home.index',compact('titulo','mensaje','tipoAlerta'));
     }
 
     public function venta($id){
