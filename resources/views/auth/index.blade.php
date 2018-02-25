@@ -9,6 +9,19 @@
 	<div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+            	<!--Panel de instrucciones-->
+				<div class="panel panel-default">
+                	<div class="panel-heading text-center">Instrucciones</div>
+                	<div class="panel-body">
+                		<p>
+                			Desde este panel usted puede gestionar los usuarios dentro de su sistema. Puede crear mas cuentas para nuevos usuarios, eliminar las cuentas o editar las cuentas.<br>
+                			<b>Atención:</b> Una vez eliminado los usuarios no podrán volver a acceder al sistema
+
+                		</p>
+                	</div>                                 
+              	</div>
+
+            	<!--Panel de usuarios-->
             	<div class="panel panel-default">
                 	<div class="panel-heading text-center">Panel De Usuarios</div>
                 	<div class="panel-body">
@@ -27,10 +40,13 @@
 			                          <td> {{ $user->username }}</td>
 			                          <td> {{ $user->email }}</td>
 			                          <td>
-			                            <div class="col-lg-6 col-md-6 col-sm-6 margen-inferior0">
+			                            <div class="col-lg-6 col-md-6 col-sm-6 ">
 			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Editar</a>
 			                            </div>
-			                            <div class="col-lg-6 col-md-6 col-sm-6">
+			                            <div class="col-lg-6 col-md-6 col-sm-6 margen-superior2 visible-xs">
+			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Eliminar</a>
+			                            </div>
+			                            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
 			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Eliminar</a>
 			                            </div>
 			                          </td>
@@ -40,6 +56,9 @@
                     	</div>
                 	</div>                                 
               	</div>
+
+              	<!--Boton de crear nuevo usuario-->
+              	<a type="button" class="btn btn-default btn-block letra150 margen-inferior2" href="#">Crear un nuevo usuario</a>
             </div>
         </div>
     </div>

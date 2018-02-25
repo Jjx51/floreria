@@ -36,3 +36,6 @@ Route::get('/prueba2', function () {
 	return view('reports.index');
 });
 
+/**/
+Route::get('/usuarios', 'AuthController@index');
+
