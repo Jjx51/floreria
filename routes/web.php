@@ -32,5 +32,7 @@ Route::get('/prueba', function () {
 	return view('home.index',compact('titulo','mensaje','tipoAlerta'));
 });
 
-/*ruta de prueba de pdf*/
-Route::get('/pdf', 'PdfController@index');
+Route::get('/prueba2', function () {
+	return view('reports.index');
+});
+
