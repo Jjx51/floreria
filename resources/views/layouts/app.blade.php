@@ -29,7 +29,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/inicio') }}">
                         Floreria Euforia
                     </a>
                 </div>
@@ -41,7 +41,17 @@
                         @auth
                             <!--Pestañas de usuario normal-->
                             <li class="hidden-sm"><a name="inicio" href="#">Inicio</a></li>
-                            <li><a name="inventario" href="#">Inventario</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" name="inventario" href="#">Nuevo<span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Categorias</a>
+                                        <a href="#">Productos</a>
+                                        <a href="#">Arreglos</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li><a name="merma" href="#">Merma</a></li>
                             <li><a name="Repartidor" href="#">Repartidor</a></li>
                             <li><a href="#">Florista</a></li>
