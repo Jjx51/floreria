@@ -10,7 +10,15 @@
         <div class="col-md-6 col-md-offset-3 ">
             <a type="button" class="btn btn-default btn-lg btn-block letra150" href="#"><h3>Venta en el Mostrador</h3> </a>
         </div>
+        
     </div>
+
+    <div class="row">
+        <br>
+        @include('partials.alerts.danger')
+    </div>
+
+    
     
     <div class="row">
         <form>
