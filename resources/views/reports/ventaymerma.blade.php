@@ -17,8 +17,8 @@
   <table id="letra" class="table">
     <thead>
       <tr class="text-center">
-        <th class="ancho50">FECHA INICIO: 12/05/2017</th>
-        <th class="ancho50">FECHA FINAL: 21/05/2017</th>
+        <th class="ancho50">FECHA INICIO: {{ $generalData['fecha_inicio'] }}</th>
+        <th class="ancho50">FECHA FINAL: {{ $generalData['fecha_fin'] }}</th>
       </tr>                    
     </thead>
   </table>    
@@ -116,13 +116,13 @@
               <td class="ancho25">NOMBRE DEL PRODUCTO</td>
               <td class="ancho25">CANTIDAD VENDIDA</td>
               <td class="ancho25">NOMBRE DEL PRODUCTO</td>
-              <td class="ancho25">CANTIDAD VENDIDA</td>
+              <td class="ancho25">CANTIDAD DESPERDICIADA</td>
             </tr>           
             <tr class="text-center">
-              <td class="ancho25">Rosas</td>
-              <td class="ancho25">300</td>
-              <td class="ancho25">Girasol</td>
-              <td class="ancho25">280</td>
+              <td class="ancho25">{{ $salesData['mostSoldName'] }}</td>
+              <td class="ancho25">{{ $salesData['mostSoldQuantity'] }}</td>
+              <td class="ancho25">{{ $wasteData['mostWasteName'] }}</td>
+              <td class="ancho25">{{ $wasteData['mostWasteQuantity'] }}</td>
             </tr>
           </tbody>
         </table>
@@ -131,13 +131,13 @@
           <thead>
             <tr class="text-center">
               <th class="ancho50">Costo de Envio</th>
-              <th class="ancho50">$500.00</th>
+              <th class="ancho50">${{ $salesData['shippingCost'] }}</th>
             </tr>                    
           </thead>
             <tbody>
             <tr class="text-center">
               <td class="ancho50 letra-negra">Total Vendido</td>
-              <td class="ancho50 letra-negra">$4500.00</td>
+              <td class="ancho50 letra-negra">${{ $salesData['totalSold'] }}</td>
             </tr>
             </tbody>
         </table><!--FIN INFORME GENERAL-->

@@ -10,7 +10,7 @@ class PdfController extends Controller
     public function index(Request $request){
     	/*Se obtiene el tipo de reporte*/
     	$reportType=$request->input('reportType');
-    	$reportType='venta';
+    	$reportType='ambos';
     	/*Obtener informacion general que se pasara*/
     	$generalData = $this->getGeneralData();
 
@@ -21,13 +21,16 @@ class PdfController extends Controller
 	        	$pdf->setPaper("A4", "portrait");
 	       	 	return $pdf->stream('reports.venta');
     			break;
+
     		case 'merma':
+    			$wasteData= $this->getWasteData();
     			$pdf = PDF::loadView('reports.merma', compact('wasteData','generalData'));
         		$pdf->setPaper("A4", "portrait");
        	 		return $pdf->stream('reports.merma');
     			break;
+
     		case 'ambos':
-    			$salesData= $this->getWasteData();
+    			$salesData= $this->getSalesData();
     			$wasteData= $this->getWasteData();
     			$pdf = PDF::loadView('reports.ventaymerma', compact('generalData','salesData','wasteData'));
         		$pdf->setPaper("A4", "portrait");
@@ -65,7 +68,7 @@ class PdfController extends Controller
     /*Obtener los datos para mostrar en reporte de merma*/
     public function getWasteData(){
         $data =  [
-            'mostWastName'      => 'Rosas' ,
+            'mostWasteName'      => 'Rosas' ,
             'mostWasteQuantity'   => '300',
         ];
         return $data;
