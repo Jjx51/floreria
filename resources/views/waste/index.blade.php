@@ -9,7 +9,7 @@
 
 	<div class="container">
 		<div class="text-center">
-			<h1>Merma</h1>
+			<h1>Registro de Merma</h1>
 		</div>	
   		<div class="row color-tabla">
   			<div class="table-responsive color-tabla margen-superior">
@@ -29,60 +29,6 @@
 			                <td>Producto Individual</td>
 			                <td>21</td>
 			        	</tr>
-                        <tr>
-                            <td>35</td>    
-			                <td>Girasol</td>
-			                <td>Producto Individual</td>
-			                <td>36</td>
-			        	</tr>
-			        	<tr>
-                            <td>1</td>    
-			                <td>Margarita</td>
-			                <td>Producto Individual</td>
-			                <td>16</td>
-			        	</tr>
-			        	<tr>
-                            <td>12</td>    
-			                <td>Orquídea</td>
-			                <td>Producto Individual</td>
-			                <td>43</td>
-			        	</tr>
-			        	<tr>
-                            <td>2</td>    
-			                <td>Tulipán</td>
-			                <td>Producto Individual</td>
-			                <td>2</td>
-			        	</tr>
-			        	<tr>
-                            <td>24</td>    
-			                <td>Rosas</td>
-			                <td>Producto Individual</td>
-			                <td>121</td>
-			        	</tr>
-			        	<tr>
-                            <td>5</td>    
-			                <td>Noche buena</td>
-			                <td>Producto Individual</td>
-			                <td>6</td>
-			        	</tr>
-			        	<tr>
-                            <td>1</td>    
-			                <td>Jazmín</td>
-			                <td>Producto Individual</td>
-			                <td>16</td>
-			        	</tr>
-			        	<tr>
-                            <td>2</td>    
-			                <td>Lirios</td>
-			                <td>Producto Individual</td>
-			                <td>4</td>
-			        	</tr>
-			        	<tr>
-                            <td>23</td>    
-			                <td>Claveles</td>
-			                <td>Producto Individual</td>
-			                <td>28</td>
-			        	</tr>
 			        	<tr>
                             <td>4</td>    
 			                <td>Narcisos</td>
@@ -96,10 +42,10 @@
   		
         <div class="row margen-inferior margen-superior">				
 		    <div class="col-sm-offset-2 col-sm-4">
-		        <button  type="button" class="btn btn-default btn-lg btn-block">Añadir</button>
+		        <button  type="button" class="btn btn-default btn-lg btn-block margen-superior2">Añadir</button>
 		    </div>
 		    <div class="col-sm-4">
-		        <button  type="button" class="btn btn-default btn-lg btn-block">Cancelar</button>
+		        <button  type="button" class="btn btn-default btn-lg btn-block margen-superior2">Cancelar</button>
 		    </div>
 		</div>
   	</div>
