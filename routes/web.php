@@ -28,3 +28,6 @@ Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido'
 Route::get('/prueba', function () {
     return view('crudarray.create');
 });
+
+/*ruta de prueba de pdf*/
+Route::get('/pdf', 'PdfController@index');
