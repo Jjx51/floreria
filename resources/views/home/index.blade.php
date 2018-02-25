@@ -14,7 +14,8 @@
             
         </div>
         
-        @include('partials.alerts.general')
+        @include('partials.alert')
+        @include('partials.errors')
 
         <div class="row">
             <form>
