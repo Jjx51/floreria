@@ -15,7 +15,7 @@
 
     <div class="row">
         <br>
-        @include('partials.alerts.danger')
+        @include('partials.alerts.general')
     </div>
 
     

@@ -26,9 +26,10 @@ Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido'
 
 /*ruta de prueba*/
 Route::get('/prueba', function () {
+	$tipoAlerta='success';
 	$titulo= 'transaccion exitosa';
 	$mensaje= 'El producto ha sido registrado';
-	return view('home.index',compact('titulo','mensaje'));
+	return view('home.index',compact('titulo','mensaje','tipoAlerta'));
 });
 
 /*ruta de prueba de pdf*/
