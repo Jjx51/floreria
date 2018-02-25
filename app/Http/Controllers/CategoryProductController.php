@@ -43,7 +43,9 @@ class CategoryProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $nombre = CategoryProduct::find($id)->name;
+        $productos = CategoryProduct::find($id)->Products;
+        return view('CategoryProduct.show',compact('nombre','productos'));
     }
 
     /**

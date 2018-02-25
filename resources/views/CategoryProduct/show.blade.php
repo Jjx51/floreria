@@ -9,11 +9,12 @@
 
 @section('content')
 	<div class="container">
-		<h1 class="text-center">Lista de Categorias</h1>
+		<h1 class="text-center">Productos de la Categoria : {{ $nombre }}</h1>
 	</div>
 	<div class="row row margen-superior margen-inferior">
   			<div class="col-sm-offset-4 col-sm-4">
-			  	<a href="{{ route('Categoryp.create') }}" class="btn btn-success btn-lg btn-block">Nueva Categoria</a>
+			  <!--modificar la direccion a product.create  -->
+			  	<a href="#" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
 		    </div>
 	</div>
 	<div class="container">
@@ -24,17 +25,18 @@
 			            <tr>
 			                <th class="text-center">N°</th>
 			                <th class="text-center">Nombre</th>
-			                <th class="text-center">Acciones</th>
+			                <th class="text-center">Cantidad</th>
+							<th class="text-center">Merma</th>
 			            </tr>
 			        </thead>
 			        <tbody>
 						
-						@foreach ($categorias as $categoria)
+						@foreach ($productos as $producto)
 							<tr>
-								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->id }} </a> </td>
-								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->name }} </a> </td>
-								<td> <a href="" class="btn btn-primary">editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
-							
+								<td> {{ $producto->id }}  </td>
+								<td> {{ $producto->NombreProducto }} </td>
+								<td> {{ $producto->Cantidad }}  </td>
+								<td> {{ $producto->merma }} </td>
 							</tr>
 						@endforeach
 							
