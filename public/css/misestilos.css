@@ -24,7 +24,7 @@ select{
 .borde-especial{
     border-style: solid;
     border-width: 10px;
-    border-color: rgba(212, 190, 50, 1) ;
+    border-color: #f0f740;
 }
 
 .especial{
@@ -112,8 +112,6 @@ textarea {
     resize: none;
 }
 
-
-
 /*Media query para tamaño xs*/
 @media only screen and (max-width: 767px) {
     .imagen-home{
@@ -140,6 +138,7 @@ textarea {
     .imagen-home{
         margin-top: 4%;
     }
+
 }
 
 .pedido-home{

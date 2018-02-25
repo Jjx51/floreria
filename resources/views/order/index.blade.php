@@ -7,19 +7,23 @@
 
 @section('content')
 	<div class="container">
-		<h1>Florista</h1>
+		<h1 class="text-center">Arreglos pendientes</h1>
 	</div>
     <div class="container borde-especial margen-inferior">
     	
+  		<div class="row margen-superior">
+  			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 " >
+			    <label class="margen-izquierdo letra20" >Arreglo: Flores de verano</label>
+            </div>
 
-  		<div class="row">
-			<div class="col-md-offset-5 col-lg-offset-7 col-sm-offset-6 col-xs-offset-6 margen-superior letra20" >
-			    <label class="margen-izquierdo" >Descripción</label>
+			<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 " >
+			    <label class="margen-izquierdo letra20" >Descripción</label>
             </div>
 		</div>
+
 		<div class="row">
             <div class="col-md-5 col-lg-4 col-xs-6 margen-superior">
-			    <img src="{{ asset('img\logo_login.jpg')}} " width="95%"  alt="" class="img-rounded img-responsive center-block ">
+			    <img src="{{ asset('img\ejemplo.jpeg')}} " width="95%"  alt="" class="img-rounded img-responsive center-block img-florista">
             </div>
 
 			<div class="col-md-7 col-lg-8 col-xs-6 margen-superior letra20">
