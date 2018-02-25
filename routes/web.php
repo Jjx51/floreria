@@ -37,5 +37,5 @@ Route::get('/prueba2', function () {
 });
 
 /**/
-Route::get('/usuarios', 'AuthController@index');
+Route::get('/usuarios', 'AuthController@create');
 
