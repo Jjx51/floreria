@@ -7,8 +7,10 @@
 
 @section('content')
 	<div class="container">
-		<h1>Confirmación</h1>
+		<h1 class="text-center">Confirmación</h1>
+		<p>Estos son los productos que han sido seleccionados. Verifique que son los que desea agregar y de click a "Confirmar venta"</p>
 	</div>
+
 
 	<div class="container">
   		<div class="row ">
@@ -37,55 +39,13 @@
 			                <td>1</td>
 			                <td>16</td>
 			        	</tr>
-			        	<tr>    
-			                <td>Orquídea</td>
-			                <td>12</td>
-			                <td>43</td>
-			        	</tr>
-			        	<tr>
-                            <td>Tulipán</td>
-			                <td>2</td>
-			                <td>2</td>
-			        	</tr>
-			        	<tr>    
-			                <td>Rosas</td>
-			                <td>24</td>
-			                <td>121</td>
-			        	</tr>
-			        	<tr>
-                            <td>Noche buena</td>
-			                <td>5</td>
-			                <td>6</td>
-			        	</tr>
-			        	<tr>
-                                
-			                <td>Jazmín</td>
-			                <td>1</td>
-			                <td>16</td>
-			        	</tr>
-			        	<tr>
-                                
-			                <td>Lirios</td>
-			                <td>2</td>
-			                <td>4</td>
-			        	</tr>
-			        	<tr>    
-			                <td>Claveles</td>
-			                <td>23</td>
-			                <td>28</td>
-			        	</tr>
-			        	<tr>
-                            <td>Narcisos</td>
-			                <td>4</td>
-			                <td>12</td>
-			        	</tr>
 			        </tbody>
 			    </table>
 			</div>
   		</div>
-        <div class="row margen-inferior margen-superior">				
-		    <div class="col-md-4 col-sm-4 col-md-offset-2  col-sm-offset-2 text-center margen-inferior"><button  type="button" class="btn btn-default btn-lg btn-block">Confirmar Venta </button></div> 
-            <div class="col-md-4 col-sm-4 text-center "><button  type="button" class="btn btn-default btn-lg btn-block">Cancelar</button></div>
+        <div class="row">				
+		    <div class="col-md-4 col-sm-4 col-md-offset-2  col-sm-offset-2 text-center margen-superior2"><button  type="button" class="btn btn-default btn-lg btn-block">Confirmar Venta </button></div> 
+            <div class="col-md-4 col-sm-4 text-center margen-superior2"><button  type="button" class="btn btn-default btn-lg btn-block">Cancelar</button></div>
 		</div>
   	</div>
 
