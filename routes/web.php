@@ -26,7 +26,7 @@ Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido'
 
 /*ruta de prueba*/
 Route::get('/prueba', function () {
-    return view('crudarray.create');
+    return view('waste.index');
 });
 
 /*ruta de prueba de pdf*/

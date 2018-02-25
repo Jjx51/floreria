@@ -2,6 +2,7 @@
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 @endsection
 
 

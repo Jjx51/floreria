@@ -3,6 +3,7 @@
 @section('head')
 	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 @endsection
 
 
@@ -103,11 +104,7 @@
             } );
         } );
     </script>
-		 
-	<script>$(document).ready(function() {
-    	$('#example').DataTable();
-		} );
-     </script>
+
     <script type="text/javascript" src="{{ asset('js/lightbox.js') }}"></script>
 
 
