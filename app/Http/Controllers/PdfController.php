@@ -10,30 +10,35 @@ class PdfController extends Controller
     public function index(Request $request){
     	/*Se obtiene el tipo de reporte*/
     	$reportType=$request->input('reportType');
+    	$reportType='venta';
     	/*Obtener informacion general que se pasara*/
     	$generalData = $this->getGeneralData();
 
-    	if($reportType='ventas'){
-    		$salesData= $this->getSalesData();
-    		$pdf = PDF::loadView('reports.venta', compact('salesData'));
-        	$pdf->setPaper("A4", "portrait");
-       	 	return $pdf->stream('reports.venta');
+    	switch ($reportType) {
+    		case 'venta':
+    			$salesData= $this->getSalesData();
+	    		$pdf = PDF::loadView('reports.venta', compact('salesData','generalData'));
+	        	$pdf->setPaper("A4", "portrait");
+	       	 	return $pdf->stream('reports.venta');
+    			break;
+    		case 'merma':
+    			$pdf = PDF::loadView('reports.merma', compact('wasteData','generalData'));
+        		$pdf->setPaper("A4", "portrait");
+       	 		return $pdf->stream('reports.merma');
+    			break;
+    		case 'ambos':
+    			$salesData= $this->getWasteData();
+    			$wasteData= $this->getWasteData();
+    			$pdf = PDF::loadView('reports.ventaymerma', compact('generalData','salesData','wasteData'));
+        		$pdf->setPaper("A4", "portrait");
+       	 		return $pdf->stream('reports.ventaymerma');
+    			break;
+    		
+    		default:
+    			# code...
+    			break;
     	}
-
-    	if($reportType='merma'){
-    		$wasteData= $this->getWasteData();
-    		$pdf = PDF::loadView('reports.merma', compact('wasteData'));
-        	$pdf->setPaper("A4", "portrait");
-       	 	return $pdf->stream('reports.merma');
-    	}
-
-    	if($reportType='ambos'){
-    		$salesData= $this->getWasteData();
-    		$wasteData= $this->getWasteData();
-    		$pdf = PDF::loadView('reports.ventaymerma', compact('salesData','wasteData'));
-        	$pdf->setPaper("A4", "portrait");
-       	 	return $pdf->stream('reports.ventaymerma');
-    	}
+    	
         
     }
 
