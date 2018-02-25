@@ -14,23 +14,12 @@ class CategoryProductController extends Controller
         return view('CategoryProduct.index', compact('categorias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $CategoryProduct = new CategoryProduct;
         return view ('CategoryProduct.create',compact('CategoryProduct'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         if (CategoryProduct::create($request->all())) {
@@ -43,50 +32,36 @@ class CategoryProductController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        $nombre = CategoryProduct::find($id)->name;
-        $productos = CategoryProduct::find($id)->Products;
+        $nombre = CategoryProduct::findOrFail($id)->name;
+        $productos = CategoryProduct::findOrFail($id)->Products;
         return view('CategoryProduct.show',compact('nombre','productos'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        $CategoryProduct = CategoryProduct::findOrFail($id);
+        return view('CategoryProduct.edit',compact('CategoryProduct'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $CategoryProduct = CategoryProduct::findOrFail($id);
+        $CategoryProduct->name = $request->name;
+        
+            if ($CategoryProduct->save()) {
+                return redirect("/Categoryp");
+            } else {
+                return view("/CategoryProduct.edit",["CategoryProduct" => $CategoryProduct]);
+            }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+       
     }
 }

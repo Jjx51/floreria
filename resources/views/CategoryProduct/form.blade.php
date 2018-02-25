@@ -12,7 +12,7 @@
 			<div class="col-sm-12">
 			<br>
 				<div class="form-group text-right">
-					{{ Form::submit('Crear',['class'=>'btn btn-primary btn-block']) }}
+					{{ Form::submit('Enviar',['class'=>'btn btn-primary btn-block']) }}
 				</div>
 			</div>
 		</div>

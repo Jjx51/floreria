@@ -33,7 +33,8 @@
 							<tr>
 								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->id }} </a> </td>
 								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->name }} </a> </td>
-								<td> <a href="" class="btn btn-primary">editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+								<td> <a href="{{url('/Categoryp/'.$categoria->id.'/edit')}}" class="btn btn-primary">Editar</a> 
+								<a href="" class="btn btn-danger">Eliminar</a></td>
 							
 							</tr>
 						@endforeach
