@@ -62,6 +62,7 @@ class CategoryProductController extends Controller
 
     public function destroy($id)
     {
-       
+        CategoryProduct::destroy($id);
+        return redirect('/Categoryp');
     }
 }

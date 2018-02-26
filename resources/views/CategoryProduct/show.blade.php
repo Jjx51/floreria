@@ -11,12 +11,6 @@
 	<div class="container">
 		<h1 class="text-center">Productos de la Categoria : {{ $nombre }}</h1>
 	</div>
-	<div class="row row margen-superior margen-inferior">
-  			<div class="col-sm-offset-4 col-sm-4">
-			  <!--modificar la direccion a product.create  -->
-			  	<a href="#" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
-		    </div>
-	</div>
 	<div class="container">
   		<div class="row ">
   			<div class="table-responsive color-tabla margen-superior">

@@ -24,7 +24,7 @@
 			            <tr>
 			                <th class="text-center">N°</th>
 			                <th class="text-center">Nombre</th>
-			                <th class="text-center">Acciones</th>
+			                <th class="text-center" COLSPAN="2">Acciones</th>
 			            </tr>
 			        </thead>
 			        <tbody>
@@ -33,9 +33,13 @@
 							<tr>
 								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->id }} </a> </td>
 								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->name }} </a> </td>
-								<td> <a href="{{url('/Categoryp/'.$categoria->id.'/edit')}}" class="btn btn-primary">Editar</a> 
-								<a href="" class="btn btn-danger">Eliminar</a></td>
-							
+								<td>
+								<div class="form-group" align="right">
+								 <a href="{{url('/Categoryp/'.$categoria->id.'/edit')}}" class="btn btn-primary">Editar</a> 
+								 </div>
+								 <td align="left">
+								@include('CategoryProduct.delete',['categoria'=> $categoria])
+								</td>
 							</tr>
 						@endforeach
 							
