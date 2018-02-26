@@ -13,7 +13,7 @@
 	</div>
 	<div class="row row margen-superior margen-inferior">
   			<div class="col-sm-offset-4 col-sm-4">
-			  	<a href="{{ route('Categoryp.create') }}" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
+			  	<a href="{{ route('Product.create') }}" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
 		    </div>
 	</div>
 	<div class="container">
