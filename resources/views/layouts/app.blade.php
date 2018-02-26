@@ -46,7 +46,7 @@
                                  <ul class="dropdown-menu">
                                     <li>
                                         <a href="{{ url("/Categoryp") }}">Categorias</a>
-                                        <a href="#">Productos</a>
+                                        <a href="{{ url("/Product") }}">Productos</a>
                                         <a href="#">Arreglos</a>
                                     </li>
                                 </ul>
