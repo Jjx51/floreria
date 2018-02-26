@@ -1,15 +1,15 @@
-{!! Form::open(['url' => $url,'method' => $method]) !!}
+{!! Form::open(['url' => $url,'method' => $method ]) !!}
 
-		<div class="form-group">
+		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('Producto', 'Nombre del Producto')}}
 			</div>
-			<div class="col-sm-9 col-xs-12"><br>
+			<div class="col-sm-9 col-xs-12" ><br>
 				{{ Form::text('NombreProducto', $product->NombreProducto,['class'=>'form-control','placeholder'=>'Nombre delproducto...'])}}
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('Catedoria_id', 'categoria_id')}}
 			</div>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('Cantidad', 'Cantidad')}}
 			</div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('merma', 'merma')}}
 			</div>

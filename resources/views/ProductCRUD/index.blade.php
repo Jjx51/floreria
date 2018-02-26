@@ -4,8 +4,8 @@
 	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-
 @endsection
+
 
 @section('content')
 	<div class="container">
@@ -42,6 +42,7 @@
 									<div class="form-group" align="right">
 								 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-primary">Editar</a> 
 								 	</div>
+								</td>
 								 <td align="left">
 									@include('ProductCRUD.delete',['product'=> $product])
 								</td>
@@ -51,7 +52,9 @@
 			    </table>
 			</div>
   		</div>
+
 	</div>	
+
 
 @endsection
 
