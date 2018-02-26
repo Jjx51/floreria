@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\CategoryProduct;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,25 +15,27 @@ class ProductController extends Controller
         return view('ProductCRUD.index',compact('products'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $product = new Product;
+        $categorias = CategoryProduct::pluck('name','id');
+        return view ('ProductCRUD.create',compact('product','categorias'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        if (Product::create($request->all())) {
+            return redirect("/Product");
+        } else {
+            //configurar mensaje de que la categoria no se guardo en el sistema
+            $product  = new Product;
+            $product->NombreProducto = $request->NombreProducto;
+            $product->category_id = $request->category_id;
+            $product->Cantidad = $request->Cantidad;
+            $product->merma = 0;
+            return view("/Product.create",["product" => $product]);
+        }
     }
 
     /**
