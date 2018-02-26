@@ -45,7 +45,7 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" name="inventario" href="#">Nuevo<span class="caret"></span></a>
                                  <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Categorias</a>
+                                        <a href="{{ url("/Categoryp") }}">Categorias</a>
                                         <a href="#">Productos</a>
                                         <a href="#">Arreglos</a>
                                     </li>
