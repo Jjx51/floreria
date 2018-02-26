@@ -38,38 +38,31 @@ class ProductController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
     public function show(Product $product)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $categorias = CategoryProduct::pluck('name','id');
+        return view('ProductCRUD.edit',compact('product','categorias'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $product = product::findOrFail($id);
+        $product->NombreProducto = $request->NombreProducto;
+        $product->category_id = $request->category_id;
+        $product->Cantidad = $request->Cantidad;
+        $product->merma = $request->merma;
+        
+        if ($product->save()) {
+            return redirect("/Product");
+        } else {
+            return view("/ProductCRUD.edit",["product" => $product]);
+        }
     }
 
     /**

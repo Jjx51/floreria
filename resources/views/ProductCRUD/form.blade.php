@@ -1,5 +1,5 @@
 {!! Form::open(['url' => $url,'method' => $method]) !!}
-  	 
+
 		<div class="form-group">
 			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('Producto', 'Nombre del Producto')}}

@@ -35,7 +35,7 @@
 								<td><a href="{{url('/Categoryp/'.$categoria->id)}}"> {{ $categoria->name }} </a> </td>
 								<td>
 								<div class="form-group" align="right">
-								 <a href="{{url('/Categoryp/'.$categoria->id.'/edit')}}" class="btn btn-primary">Editar</a> 
+								 <a href="{{url('/Categoryp/'.$categoria->id.'/edit',['id'=>$categoria->id])}}" class="btn btn-primary">Editar</a> 
 								 </div>
 								 <td align="left">
 								@include('CategoryProduct.delete',['categoria'=> $categoria])
