@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Crypt;
 
 class AuthController extends Controller
 {
+
+	
     public function index(){    	
         $users=User::all();
         return view('auth.index',compact('users'));
     }
 
     public function create(){
-    	return view('auth.register');
+    	return view('auth.create');
     }
 }

@@ -24,18 +24,7 @@ Route::get('/inicio/venta/{id}', 'HomeController@venta')->name('inicio.venta')->
 Route::get('/inicio/mostrador/{id}', 'HomeController@mostrador')->name('inicio.mostrador')->where(['id'=>'[\d]+']);
 Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido')->where(['id'=>'[\d]+']);
 
-/*ruta de prueba*/
-Route::get('/prueba', function () {
-	$tipoAlerta='success';
-	$titulo= 'transaccion exitosa';
-	$mensaje= 'El producto ha sido registrado';
-	return view('home.index',compact('titulo','mensaje','tipoAlerta'));
-});
-
-Route::get('/prueba2', function () {
-	return view('reports.index');
-});
-
-/**/
-Route::get('/usuarios', 'AuthController@create');
+/*Rutas de usuarios*/
+Route::get('/usuarios', 'AuthController@index')->name('usuarios.index');
+Route::get('/usuarios/crear', 'AuthController@create')->name('usuarios.create');
 

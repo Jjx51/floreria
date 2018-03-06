@@ -58,7 +58,7 @@
               	</div>
 
               	<!--Boton de crear nuevo usuario-->
-              	<a type="button" class="btn btn-default btn-block letra150 margen-inferior2" href="#">Crear un nuevo usuario</a>
+              	<a type="button" class="btn btn-default btn-block letra150 margen-inferior2" href="{{ route('usuarios.create') }}">Crear un nuevo usuario</a>
             </div>
         </div>
     </div>
