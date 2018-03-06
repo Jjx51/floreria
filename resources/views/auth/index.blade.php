@@ -41,13 +41,20 @@
 			                          <td> {{ $user->email }}</td>
 			                          <td>
 			                            <div class="col-lg-6 col-md-6 col-sm-6 ">
-			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Editar</a>
+			                            	<a class="btn btn-default btn-block btn-sm" href="{{ route('usuarios.edit',$user->id) }}" role="button">Editar</a>
 			                            </div>
 			                            <div class="col-lg-6 col-md-6 col-sm-6 margen-superior2 visible-xs">
 			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Eliminar</a>
 			                            </div>
 			                            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
-			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Eliminar</a>
+			                            	<form class="form-horizontal" method="POST" action="{{ route('usuarios.delete') }}">
+						                        {{ csrf_field() }}
+						                        {!! method_field('DELETE') !!}
+									                <button type="submit" class="btn btn-default">
+						                                Eliminar
+						                            </button>
+						                            <input type="hidden" name="id" value="{{ $user->id }}">
+						                    </form>
 			                            </div>
 			                          </td>
 			                        </tr>

@@ -27,4 +27,7 @@ Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido'
 /*Rutas de usuarios*/
 Route::get('/usuarios', 'AuthController@index')->name('usuarios.index');
 Route::get('/usuarios/crear', 'AuthController@create')->name('usuarios.create');
+Route::get('/usuarios/{id}/editar', 'AuthController@edit')->name('usuarios.edit')->where(['id'=>'[\d]+']);
+Route::put('/usuarios', 'AuthController@update')->name('usuarios.update');
+Route::delete('/usuarios', 'AuthController@delete')->name('usuarios.delete');
 
