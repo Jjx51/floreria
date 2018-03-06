@@ -21,15 +21,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        // validar para usuarios registrados y activos
-        //validar para productos agragados 
-        $tipoAlerta='success';
-        $titulo= 'transaccion exitosa';
-        $mensaje= 'El producto ha sido registrado';
-        return view('home.index',compact('titulo','mensaje','tipoAlerta'));
-    }
+    // public function index()
+    // {
+    //     $tipoAlerta='success';
+    //     $titulo= 'transaccion exitosa';
+    //     $mensaje= 'El producto ha sido registrado';
+    //     return view('home.index',compact('titulo','mensaje','tipoAlerta'));
+    // }
 
     public function venta($id){
         return view('home.venta',compact('id'));

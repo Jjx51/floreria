@@ -15,11 +15,11 @@
 */
 
 Route::view('/', 'welcome');
+Route::view('/inicio', 'home.index')->name('inicio');
 
 Auth::routes();
 
-Route::get('/inicio', 'HomeController@index')->name('inicio');
-
+//Route::get('/inicio', 'HomeController@index')->name('inicio');
 /*Rutas de home*/
 Route::get('/inicio/venta/{id}', 'HomeController@venta')->name('inicio.venta')->where(['id'=>'[\d]+']);
 Route::get('/inicio/mostrador/{id}', 'HomeController@mostrador')->name('inicio.mostrador')->where(['id'=>'[\d]+']);
