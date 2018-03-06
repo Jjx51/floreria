@@ -29,7 +29,23 @@ class AuthController extends Controller
     	return view('auth.edit')->with('user',$user);
     }
 
-    public function update(EditUserRequest $request){
+    public function update(Request $request){
+    	/*Validación*/
+		$username = $request->input('username');
+        $currentUsername = $request->input('currentUserName');
+              
+        $this->validate(request(), [    
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:6|confirmed',
+        ]); 
+        
+        if($username!=$currentUsername){
+            $this->validate(request(), [
+                'username' => 'required|string|max:255|unique:users',
+            ]); 
+        }
+    	/**/
     	if($request->input('id')==1){
             $rol='admin';
         }else{

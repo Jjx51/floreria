@@ -81,6 +81,7 @@
                         </div>
 
                         <input type="hidden" name="id" value="{{ $user->id }}">
+                        <input type="hidden" name="currentUserName" value="{{ $user->username }}">
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
