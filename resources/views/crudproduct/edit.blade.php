@@ -7,6 +7,9 @@
 
 @section('content')
 
+	@include('partials.alert')
+    @include('partials.errors')
+
 @endsection
 
 @section('javascript')

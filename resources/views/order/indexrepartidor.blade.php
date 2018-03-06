@@ -9,6 +9,9 @@
 @section('content')
 
 	<div class="container">
+		@include('partials.alert')
+    	@include('partials.errors')
+
 		<h3 class="text-center">Bloque1</h3>
 		<div class="row">
   			<div class="table-responsive color-tabla margen-superior">

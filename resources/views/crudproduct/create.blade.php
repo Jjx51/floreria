@@ -13,6 +13,8 @@
                     <div class="panel-heading text-center lead"><strong>Crear Producto</strong></div>
 
                     <div class="panel-body">
+                            @include('partials.alert')
+                            @include('partials.errors')
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
 

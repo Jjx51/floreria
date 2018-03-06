@@ -9,6 +9,8 @@
 	<div class="container">
 		<h1>Inventario</h1>
 	</div>
+	@include('partials.alert')
+    @include('partials.errors')
 
 @endsection
 

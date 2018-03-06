@@ -9,6 +9,10 @@
 	<div class="container">
 		<h1 class="text-center">Arreglos pendientes</h1>
 	</div>
+
+	@include('partials.alert')
+    @include('partials.errors')
+
     <div class="container borde-especial margen-inferior">
     	
   		<div class="row margen-superior">

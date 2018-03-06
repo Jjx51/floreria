@@ -12,6 +12,10 @@
 	<div class="container">
 		<h1>Seleccionar productos manualmente</h1>
 	</div>
+
+	@include('partials.alert')
+    @include('partials.errors')
+    
 	<div class="container">
   		<div class="row ">
   			<div class="table-responsive color-tabla margen-superior">

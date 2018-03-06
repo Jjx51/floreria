@@ -11,7 +11,11 @@
 	<div class="container">
 		<div class="text-center">
 			<h1>Registro de Merma</h1>
-		</div>	
+		</div>
+
+		@include('partials.alert')
+    	@include('partials.errors')
+
   		<div class="row color-tabla">
   			<div class="table-responsive color-tabla margen-superior">
 			  	<table id="example" class="table table-striped table-bordered text-center" cellspacing="0">
