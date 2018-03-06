@@ -59,7 +59,7 @@
                             <!--Pestañas de usuario administrador-->
                             @if(Auth::user()->rol=='admin')
                                 <li><a name="Reportes" href="#">Reportes</a></li>
-                                <li><a name="Panel" href="#"><div class="hidden-sm">Panel de usuarios</div><div class="visible-sm">Panel</div></a></li>
+                                <li><a name="Panel" href="{{ route('usuarios.index') }}"><div class="hidden-sm">Panel de usuarios</div><div class="visible-sm">Panel</div></a></li>
                             @endif
                         @endauth
                     </ul>

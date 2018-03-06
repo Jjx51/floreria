@@ -7,6 +7,12 @@ use PDF;
 
 class PdfController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('isAdmin');
+    }
+    
     public function index(Request $request){
     	/*Se obtiene el tipo de reporte*/
     	$reportType=$request->input('reportType');
