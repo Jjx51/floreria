@@ -27,7 +27,8 @@
 							<th class="text-center">Categoria</th>
 							<th class="text-center">Cantidad</th>
 							<th class="text-center">Merma</th>
-			                <th class="text-center" COLSPAN="2">Acciones</th>
+			                <th class="text-center">Acción 1</th>
+							<th class="text-center">Acción 2</th>
 			            </tr>
 			        </thead>
 			        <tbody>
