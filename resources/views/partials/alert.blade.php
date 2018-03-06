@@ -13,7 +13,7 @@
 	    <br>           
 		<div class="alert alert-success alert-dismissible">
 		  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		  <strong>Información</strong> {{ $success }}
+		  <strong>Operación realizada con exito</strong> {{ $success }}
 		</div>
 	</div>
 @endif
@@ -23,7 +23,7 @@
 	    <br>           
 		<div class="alert alert-warning alert-dismissible">
 		  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		  <strong>Información</strong> {{ $warning }}
+		  <strong>Advertencia</strong> {{ $warning }}
 		</div>
 	</div>
 @endif
@@ -33,7 +33,7 @@
 	    <br>           
 		<div class="alert alert-danger alert-dismissible">
 		  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		  <strong>Información</strong> {{ $danger }}
+		  <strong>Error</strong> {{ $danger }}
 		</div>
 	</div>
 @endif
