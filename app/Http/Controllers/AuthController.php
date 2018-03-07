@@ -67,6 +67,6 @@ class AuthController extends Controller
     public function delete(Request $request){
         $user = User::findOrFail($request->input('id'));
         $user->delete();
-        return redirect()->route('usuarios.index');
+        return redirect()->route('usuarios.index')->with('success','Usuario eliminado');
     }
 }
