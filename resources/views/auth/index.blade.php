@@ -16,10 +16,13 @@
                 		<p>
                 			Desde este panel usted puede gestionar los usuarios dentro de su sistema. Puede crear mas cuentas para nuevos usuarios, eliminar las cuentas o editar las cuentas.<br>
                 			<b>Atención:</b> Una vez eliminado los usuarios no podrán volver a acceder al sistema
-
                 		</p>
                 	</div>                                 
               	</div>
+
+              	<!--Boton de crear nuevo usuario-->
+              	<a type="button" class="btn btn-default margen-inferior2" href="{{ route('usuarios.create') }}">Crear un nuevo usuario
+              	</a>
 
             	<!--Panel de usuarios-->
             	<div class="panel panel-default">
@@ -44,13 +47,20 @@
 			                            	<a class="btn btn-default btn-block btn-sm" href="{{ route('usuarios.edit',$user->id) }}" role="button">Editar</a>
 			                            </div>
 			                            <div class="col-lg-6 col-md-6 col-sm-6 margen-superior2 visible-xs">
-			                            	<a class="btn btn-default btn-block btn-sm" href="#" role="button">Eliminar</a>
+			                            	<form class="form-horizontal" method="POST" action="{{ route('usuarios.delete') }}">
+						                        {{ csrf_field() }}
+						                        {!! method_field('DELETE') !!}
+									                <button type="submit" class="btn btn-default btn-block btn-sm">
+						                                Eliminar
+						                            </button>
+						                            <input type="hidden" name="id" value="{{ $user->id }}">
+						                    </form>
 			                            </div>
 			                            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
 			                            	<form class="form-horizontal" method="POST" action="{{ route('usuarios.delete') }}">
 						                        {{ csrf_field() }}
 						                        {!! method_field('DELETE') !!}
-									                <button type="submit" class="btn btn-default">
+									                <button type="submit" class="btn btn-default btn-block btn-sm">
 						                                Eliminar
 						                            </button>
 						                            <input type="hidden" name="id" value="{{ $user->id }}">
@@ -63,9 +73,6 @@
                     	</div>
                 	</div>                                 
               	</div>
-
-              	<!--Boton de crear nuevo usuario-->
-              	<a type="button" class="btn btn-default btn-block letra150 margen-inferior2" href="{{ route('usuarios.create') }}">Crear un nuevo usuario</a>
             </div>
         </div>
     </div>
