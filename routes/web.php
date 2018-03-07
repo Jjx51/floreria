@@ -37,3 +37,7 @@ Route::resource('Categoryp', 'CategoryProductController');
 Route::resource('Product', 'ProductController');
 
 Route::get('/reportes','ReportsController@index')->name('reports.index');
+Route::get('/florista','OrderController@index')->name('order.florista');
+Route::get('/repartidor','OrderController@indexrepartidor')->name('order.repartidor');
+Route::get('/merma','WasteController@index')->name('waste.index');
+Route::get('/venta-manual','arrayOrder@index')->name('arrayorder.index');
