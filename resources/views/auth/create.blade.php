@@ -19,6 +19,7 @@
                         <ul>
                             <li>El nombre de usuario no puede repetirse</li>
                             <li>La contraseña debe tener al minimo 6 caracteres</li>
+                            <li>El correo no puede repetirse</li>
                         </ul>
                     </p>
                 </div>                                 
