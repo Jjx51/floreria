@@ -26,4 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function arrays(){
+        return $this -> hasMany('App\My_Array','user_id','id');
+    }
+
+
 }

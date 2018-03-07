@@ -34,7 +34,7 @@
 							@foreach ($arrays as $array)
 								<tr>
 									<td>{{$array->id}}</td>
-									<td>{{$array->user_id}}</td>
+									<td>{{$array->user->name}}</td>
 									<td>{{$array->status_id}}</td>
 									<td>{{$array->Codigo}}</td>
 									<td>{{$array->NombreAttangements}}</td>
