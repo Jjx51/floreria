@@ -16,5 +16,9 @@ class My_Array extends Model
         return $this -> belongsTo('App\User','user_id','id');
     }
 
+    public function status()
+    {
+        return $this -> belongsTo('App\StatusArray','status_id','id');
+    }
 
 }

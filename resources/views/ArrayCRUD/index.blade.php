@@ -9,7 +9,6 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2>Lista de Arreglos</h2>
@@ -22,7 +21,7 @@
 						<thead>
 							<tr>
 								<th>id</th>
-								<th>user</th>
+								<th>Responsable</th>
 								<th>Status</th>
 								<th>Codigo</th>
 								<th>nombre</th>
@@ -35,7 +34,7 @@
 								<tr>
 									<td>{{$array->id}}</td>
 									<td>{{$array->user->name}}</td>
-									<td>{{$array->status_id}}</td>
+									<td>{{$array->status->status}}</td>
 									<td>{{$array->Codigo}}</td>
 									<td>{{$array->NombreAttangements}}</td>
 									<td>{{$array->imagen}}</td>
@@ -48,7 +47,6 @@
 				</div>
 
 
-			</div>
 		</div>
 	</div>
 </div>
