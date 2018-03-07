@@ -35,3 +35,4 @@ Route::delete('/usuarios', 'AuthController@delete')->name('usuarios.delete');
 
 Route::resource('Categoryp', 'CategoryProductController');
 Route::resource('Product', 'ProductController');
+Route::resource('Array', 'ArrayController');

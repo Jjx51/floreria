@@ -47,7 +47,7 @@
                                     <li>
                                         <a href="{{ url("/Categoryp") }}">Categorias</a>
                                         <a href="{{ url("/Product") }}">Productos</a>
-                                        <a href="#">Arreglos</a>
+                                        <a href="{{ url("/Array") }}">Arreglos</a>
                                     </li>
                                 </ul>
                             </li>
