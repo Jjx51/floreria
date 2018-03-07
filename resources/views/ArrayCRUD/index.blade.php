@@ -11,42 +11,34 @@
 	<div class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h2>Lista de Arreglos</h2>
-					<a href="#" class="btn btn-sm btn-primary pull-right">crear</a>
+					<h2>Lista de Arreglos
+					<a href="#" class="btn btn-primary pull-right">Crear Nuevo Arreglo</a>
+					</h2>
 					<br>
 				</div>
 
 				<div class="panel-body">
-					<table class="table table-striped table-hover">
-						<thead>
-							<tr>
-								<th>id</th>
-								<th>Responsable</th>
-								<th>Status</th>
-								<th>Codigo</th>
-								<th>nombre</th>
-								<th>imagen</th>
-							</tr>
-						</thead>
-
-						<tbody>
-							@foreach ($arrays as $array)
-								<tr>
-									<td>{{$array->id}}</td>
-									<td>{{$array->user->name}}</td>
-									<td>{{$array->status->status}}</td>
-									<td>{{$array->Codigo}}</td>
-									<td>{{$array->NombreAttangements}}</td>
-									<td>{{$array->imagen}}</td>
-								</tr>
-							@endforeach
-
-						</tbody>
-
-					</table>
+					@foreach ($arrays as $array)
+						<div class="row">
+							<div class="col-md-4 col-md-offset-2">
+								<h3>imagen</h3>
+								{{$array->imagen}}
+							</div>
+							<div class="col-md-6">
+								<h4>id: {{$array->id}}</h4>
+								<h4>Responsable: {{$array->user->name}}</h4>
+								<h4>Status: {{$array->status->status}}</h4>
+								<h4>Codigo: {{$array->Codigo}}</h4>
+								<h4>nombre; {{$array->NombreAttangements}}</h4>
+								<div class="form-group">
+									<a href="{{url('/Array/'.$array->id.'/edit')}}" class="btn btn-success btn-block">Editar</a> 
+								</div>
+								@include('ArrayCRUD.delete',['array'=> $array])
+							</div>
+						</div>
+						<hr>
+					@endforeach
 				</div>
-
-
 		</div>
 	</div>
 </div>
@@ -55,6 +47,3 @@
 	
 
 @endsection
-
-
-
