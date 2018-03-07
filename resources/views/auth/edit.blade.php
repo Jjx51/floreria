@@ -8,7 +8,24 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default panel-centrado">
+            @include('partials.errors')
+            <!--Panel de instrucciones-->
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">Instrucciones</div>
+                <div class="panel-body">
+                    <p>
+                        Para editar un usuario debe tener en cuenta lo siguiente:<br>
+                        <ul>
+                            <li>El nombre de usuario no puede repetirse</li>
+                            <li>La contraseña debe tener al minimo 6 caracteres</li>
+                            <li>El correo no puede repetirse</li>
+                        </ul>
+                        <b>Atención:</b> Por protección a las contraseñas debe definir una nueva.
+                    </p>
+                </div>                                 
+            </div>
+
+            <div class="panel panel-default">
                 <div class="panel-heading">Edición de usuario: {{ $user->name }}</div>
 
                 <div class="panel-body">

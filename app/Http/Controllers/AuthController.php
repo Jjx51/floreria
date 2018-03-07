@@ -61,7 +61,7 @@ class AuthController extends Controller
                 'rol' => $rol,
                 'updated_at' => date("Y-m-d H:i:s"),
         ]);
-        return redirect()->route('usuarios.index');
+        return redirect()->route('usuarios.index')->with('success','Usuario editado exitosamente');
     }
 
     public function delete(Request $request){
