@@ -19,6 +19,8 @@
                 		</p>
                 	</div>                                 
               	</div>
+              	@include('partials.alert')
+        		@include('partials.errors')
 
               	<!--Boton de crear nuevo usuario-->
               	<a type="button" class="btn btn-default margen-inferior2" href="{{ route('usuarios.create') }}">Crear un nuevo usuario
