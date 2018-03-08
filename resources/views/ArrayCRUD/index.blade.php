@@ -12,7 +12,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2>Lista de Arreglos
-					<a href="#" class="btn btn-primary pull-right">Crear Nuevo Arreglo</a>
+					<a href="{{ route('Array.create') }}" class="btn btn-primary pull-right">Crear Nuevo Arreglo</a>
 					</h2>
 					<br>
 				</div>
@@ -26,8 +26,6 @@
 							</div>
 							<div class="col-md-6">
 								<h4>id: {{$array->id}}</h4>
-								<h4>Responsable: {{$array->user->name}}</h4>
-								<h4>Status: {{$array->status->status}}</h4>
 								<h4>Codigo: {{$array->Codigo}}</h4>
 								<h4>nombre; {{$array->NombreAttangements}}</h4>
 								<div class="form-group">
@@ -38,6 +36,7 @@
 						</div>
 						<hr>
 					@endforeach
+					{{ $arrays->render()}}
 				</div>
 		</div>
 	</div>

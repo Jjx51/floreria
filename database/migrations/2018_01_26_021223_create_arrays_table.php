@@ -15,13 +15,9 @@ class CreateArraysTable extends Migration
     {
         Schema::create('arrays', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned(); 
-            $table->integer('status_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->foreign('status_id')->references('id')->on('status_arrays')->onUpdate('cascade');
             $table->string('Codigo',10)->unique();
             $table->string('NombreAttangements',30);
-            $table->string('imagen',30);
+            $table->string('imagen',30)->nullable()->default('Sin imagen');;
             $table->timestamps();
         });
     }

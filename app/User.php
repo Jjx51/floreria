@@ -27,9 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function arrays(){
-        return $this -> hasMany('App\My_Array','user_id','id');
-    }
+    //public function arrays(){
+    //    return $this -> hasMany('App\My_Array','user_id','id');
+    //}
 
 
 }

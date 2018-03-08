@@ -20,7 +20,6 @@ class CreateArrayProductsTable extends Migration
 			$table->integer('product_id')->unsigned();
 			$table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade');
             $table->integer('Cantidad');
-            $table->string('Lugar');
             $table->timestamps();
         });
     }

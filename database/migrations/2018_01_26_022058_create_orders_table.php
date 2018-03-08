@@ -26,7 +26,12 @@ class CreateOrdersTable extends Migration
             $table->time('HoraEntrega');
             $table->integer('Bloque');
             $table->integer('Prioridad');
+            $table->integer('user_id')->unsigned(); 
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->integer('status_id')->unsigned(); 
+            $table->foreign('status_id')->references('id')->on('status_orders')->onUpdate('cascade');
             $table->timestamps();
+
         });
     }
 
