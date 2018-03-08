@@ -16,7 +16,7 @@ class ArrayController extends Controller
      */
     public function index()
     {
-        $arrays = My_Array::orderBy('id','DESC')->paginate(4);
+        $arrays = My_Array::orderBy('id','DESC')->paginate(3);
         return view('ArrayCRUD.index',compact('arrays'));
     }
 
@@ -44,7 +44,7 @@ class ArrayController extends Controller
         } else {
             //configurar mensaje de que la categoria no se guardo en el sistema
             $array  = new My_Array;
-            $array->NombreProducto = $request->NombreProducto;
+            $array->NombreAttangements = $request->NombreAttangements;
             $array->Codigo = $request->Codigo;
             $array->imagen = $request->imagen;
             return view("/Array.create",["array" => $array]);
@@ -70,7 +70,8 @@ class ArrayController extends Controller
      */
     public function edit($id)
     {
-        //
+        $array = My_Array::findOrFail($id);
+        return view('ArrayCRUD.edit',compact('array'));
     }
 
     /**
@@ -82,7 +83,15 @@ class ArrayController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $array = My_array::findOrFail($id);
+        $array->NombreAttangements = $request->NombreAttangements;
+        $array->Codigo = $request->Codigo;
+        $array->imagen = $request->imagen;
+        if ($array->save()) {
+            return redirect("/Array");
+        } else {
+            return view("/ArrayCRUD.edit",["array" => $array]);
+        }
     }
 
     /**
@@ -93,6 +102,7 @@ class ArrayController extends Controller
      */
     public function destroy($id)
     {
-        //
+        My_Array::destroy($id);
+        return redirect('/Array');
     }
 }

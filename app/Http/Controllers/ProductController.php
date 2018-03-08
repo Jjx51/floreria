@@ -34,7 +34,7 @@ class ProductController extends Controller
             $product->category_id = $request->category_id;
             $product->Cantidad = $request->Cantidad;
             $product->merma = 0;
-            return view("/Product.create",["product" => $product]);
+            return view("/ProductCRUD.create",["product" => $product]);
         }
     }
 

@@ -7,8 +7,15 @@
 
 @section('content')
 
-@endsection
+<div class="container">
+	<h1 class="text-center">Editar Arreglo</h1>
+	</div>
 
-@section('javascript')
+	<div class="container">
+		<div class="row">
+	@include('ArrayCRUD.form',['array'=>$array, 'url' => '/Array/'.$array->id, 'method' => 'PUT','before' => 'csrf'])
+
+		</div>
+	</div>
 
 @endsection
