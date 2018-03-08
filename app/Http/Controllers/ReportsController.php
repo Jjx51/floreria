@@ -5,15 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use PDF;
 
-class PdfController extends Controller
+class ReportsController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
         $this->middleware('isAdmin');
     }
+    public function index(){
+        return view('reports.index');
+    }
     
-    public function index(Request $request){
+    public function show(Request $request){
     	/*Se obtiene el tipo de reporte*/
     	$reportType=$request->input('reportType');
     	$reportType='merma';
@@ -46,9 +49,7 @@ class PdfController extends Controller
     		default:
     			# code...
     			break;
-    	}
-    	
-        
+    	}       
     }
 
     /*Funcion para conseguir los datos que usara el reporte*/

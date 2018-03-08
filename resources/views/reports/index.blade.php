@@ -12,11 +12,16 @@
 	<div class="text-center">
 		<h1>Registro de Merma</h1>
 	</div>
-
-	<p class="text-justify">Porfavor seleccione que tipo de reporte desea ver , posteriormente seleccione el periodo del reporte.<br>
-		<b>Atención:</b>No seleccione un periodo de tiempo no valido como fechas antes del comienzo del proyecto o una fecha despues de la actual.
-	</p>
-	<br>
+	<!--Panel de instrucciones-->
+	<div class="panel panel-default">
+        <div class="panel-heading text-center">Instrucciones</div>
+            <div class="panel-body">
+               <p class="text-justify">
+                Porfavor seleccione que tipo de reporte desea ver , posteriormente seleccione el periodo del reporte.<br>
+                <b>Atención:</b> No seleccione un periodo de tiempo no valido como fechas antes del comienzo del proyecto o una fecha despues de la actual.
+            </p>
+        </div>                                 
+    </div>
 
 	@include('partials.alert')
     @include('partials.errors')
