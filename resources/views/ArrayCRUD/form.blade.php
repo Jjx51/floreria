@@ -1,4 +1,4 @@
-{!! Form::open(['url' => $url,'method' => $method ]) !!}
+{!! Form::open(['url' => $url,'method' => $method, 'files'=>true ]) !!}
 
 		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
@@ -22,10 +22,10 @@
 
 		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
-				{{Form::label('imagen', 'imagen')}}
+				{{Form::label('img', 'Imagen')}}
 			</div>
 			<div class="col-sm-9 col-xs-12"><br>
-				{{ Form::text('imagen', $array->imagen,['class'=>'form-control','placeholder'=>'imagen'])}}
+				{{ Form::file('imagen')}}
 			</div>
 		</div>
 

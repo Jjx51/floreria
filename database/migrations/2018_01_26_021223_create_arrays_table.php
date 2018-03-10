@@ -17,7 +17,7 @@ class CreateArraysTable extends Migration
             $table->increments('id');
             $table->string('Codigo',10)->unique();
             $table->string('NombreAttangements',30);
-            $table->string('imagen',30)->nullable()->default('Sin imagen');;
+            $table->string('imagen',128)->nullable();
             $table->timestamps();
         });
     }

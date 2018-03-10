@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ArrayStoreRequest;
+use App\Http\Requests\ArrayUpdateRequest;
+use Illuminate\Support\Facades\Storage;
 use App\My_Array;
 use App\User;
 use App\StatusArray;
+use App\Product;
 
 class ArrayController extends Controller
 {
@@ -27,8 +31,10 @@ class ArrayController extends Controller
      */
     public function create()
     {
+        //->where('category_id','1')
+        $products = Product::orderBy('NombreProducto','ACD')->pluck('NombreProducto','id');
         $array = new My_Array;
-        return view ('ArrayCRUD.create',compact('array'));
+        return view ('ArrayCRUD.create',compact('array','products'));
     }
 
     /**
@@ -37,18 +43,18 @@ class ArrayController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArrayStoreRequest $request)
     {
-        if (My_array::create($request->all())) {
-            return redirect("/Array");
-        } else {
-            //configurar mensaje de que la categoria no se guardo en el sistema
-            $array  = new My_Array;
-            $array->NombreAttangements = $request->NombreAttangements;
-            $array->Codigo = $request->Codigo;
-            $array->imagen = $request->imagen;
-            return view("/Array.create",["array" => $array]);
+        $array = My_Array::create($request->all());
+        if ($request->file('imagen')){
+            $path =Storage::disk('public')->put('img/arreglos', $request->file('imagen'));
+            $array->fill(['imagen'=>asset($path)])->save();
+
         }
+        return redirect("/Array");
+        
+        
+       
     }
 
     /**
@@ -70,8 +76,9 @@ class ArrayController extends Controller
      */
     public function edit($id)
     {
+        $products = Product::orderBy('NombreProducto','ACD')->pluck('NombreProducto','id');
         $array = My_Array::findOrFail($id);
-        return view('ArrayCRUD.edit',compact('array'));
+        return view('ArrayCRUD.edit',compact('array','products'));
     }
 
     /**
@@ -81,17 +88,17 @@ class ArrayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ArrayUpdateRequest $request, $id)
     {
         $array = My_array::findOrFail($id);
-        $array->NombreAttangements = $request->NombreAttangements;
-        $array->Codigo = $request->Codigo;
-        $array->imagen = $request->imagen;
-        if ($array->save()) {
-            return redirect("/Array");
-        } else {
-            return view("/ArrayCRUD.edit",["array" => $array]);
+        $array->fill($request->all())->save();
+
+        if ($request->file('imagen')){
+            $path =Storage::disk('public')->put('img/arreglos', $request->file('imagen'));
+            $array->fill(['imagen'=>asset($path)])->save();
         }
+        return redirect("/Array");
+        
     }
 
     /**
@@ -102,6 +109,10 @@ class ArrayController extends Controller
      */
     public function destroy($id)
     {
+
+        if(file_exists(public_path(substr(My_array::findOrFail($id)->imagen,19)))){
+            Storage::disk('public')->delete(substr(My_array::findOrFail($id)->imagen,19));
+        }
         My_Array::destroy($id);
         return redirect('/Array');
     }

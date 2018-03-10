@@ -8,14 +8,30 @@
 @section('content')
 
 <div class="container">
-	<h1 class="text-center">Editar Arreglo</h1>
+	<div class="row">
+        <div class="col-md-8 col-md-offset-2">
+			@include('partials.alert')
+			@include('partials.errors')
+        </div>
 	</div>
+</div>
 
-	<div class="container">
-		<div class="row">
-	@include('ArrayCRUD.form',['array'=>$array, 'url' => '/Array/'.$array->id, 'method' => 'PUT','before' => 'csrf'])
+			
 
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center lead"><strong>Crear nuevo arreglo de flores</strong></div>
+                    <div class="panel-body">
+					
+						@include('ArrayCRUD.form',['array'=>$array, 'url' => '/Array/'.$array->id, 'method' => 'PUT','before' => 'csrf'])
 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+
