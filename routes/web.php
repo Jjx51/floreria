@@ -36,6 +36,7 @@ Route::delete('/usuarios', 'AuthController@delete')->name('usuarios.delete');
 Route::resource('Categoryp', 'CategoryProductController');
 Route::resource('Product', 'ProductController');
 Route::resource('Array', 'ArrayController');
+Route::resource('ArrayProduct', 'ArrayProductController');
 
 Route::get('/reportes','ReportsController@index')->name('reports.index');
 Route::get('/florista','OrderController@index')->name('order.florista');
