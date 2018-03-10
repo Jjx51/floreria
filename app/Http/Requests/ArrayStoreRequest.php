@@ -25,13 +25,13 @@ class ArrayStoreRequest extends FormRequest
     {
         if ($this->file()){
             $campos = [
-                'NombreAttangements' => 'required|string|max:30',
+                'Nombre' => 'required|string|max:30',
                 'Codigo' => 'required|string|max:10|unique:arrays,Codigo',
                 'imagen' => 'required|mimes:jpeg,jpg,png,bmp',
             ];
         }else{
             $campos = [
-                'NombreAttangements' => 'required|string|max:30',
+                'Nombre' => 'required|string|max:30',
                 'Codigo'=> 'required|string|max:10|unique:arrays,Codigo',
             ];
         }       

@@ -10,6 +10,7 @@ use App\My_Array;
 use App\User;
 use App\StatusArray;
 use App\Product;
+use App\ArrayProduct;
 
 class ArrayController extends Controller
 {
@@ -91,10 +92,14 @@ class ArrayController extends Controller
     public function update(ArrayUpdateRequest $request, $id)
     {
         $array = My_array::findOrFail($id);
+        $borrar = $array->imagen;
         $array->fill($request->all())->save();
 
+
         if ($request->file('imagen')){
+            Storage::disk('public')->delete(substr($borrar,19));
             $path =Storage::disk('public')->put('img/arreglos', $request->file('imagen'));
+
             $array->fill(['imagen'=>asset($path)])->save();
         }
         return redirect("/Array");
@@ -109,7 +114,6 @@ class ArrayController extends Controller
      */
     public function destroy($id)
     {
-
         if(file_exists(public_path(substr(My_array::findOrFail($id)->imagen,19)))){
             Storage::disk('public')->delete(substr(My_array::findOrFail($id)->imagen,19));
         }

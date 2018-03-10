@@ -16,7 +16,7 @@ class CreateArraysTable extends Migration
         Schema::create('arrays', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Codigo',10)->unique();
-            $table->string('NombreAttangements',30);
+            $table->string('Nombre',30);
             $table->string('imagen',128)->nullable();
             $table->timestamps();
         });

@@ -9,6 +9,6 @@ class My_Array extends Model
 {
     protected $table = 'arrays';
 
-    protected $fillable = ['Codigo','NombreAttangements','imagen'];
+    protected $fillable = ['Codigo','Nombre','imagen'];
 
 }
