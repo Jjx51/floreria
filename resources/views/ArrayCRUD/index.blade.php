@@ -47,7 +47,7 @@
 							<div class="col-md-4">
 								<h4>id: {{$array->id}}</h4>
 								<h4>Codigo: {{$array->Codigo}}</h4>
-								<h4>nombre; {{$array->NombreAttangements}}</h4>
+								<h4>nombre; {{$array->Nombre}}</h4>
 								
 							</div>
 

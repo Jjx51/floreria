@@ -5,7 +5,7 @@
 				{{Form::label('Nombre', 'Nombre del arreglo')}}
 			</div>
 			<div class="col-sm-9 col-xs-12" ><br>
-				{{ Form::text('NombreAttangements', $array->NombreAttangements,['class'=>'form-control','placeholder'=>'Nombre del arreglo...'])}}
+				{{ Form::text('Nombre', $array->Nombre,['class'=>'form-control','placeholder'=>'Nombre del arreglo...'])}}
 			</div>
 		</div>
 
