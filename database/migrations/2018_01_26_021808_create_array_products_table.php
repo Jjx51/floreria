@@ -16,9 +16,9 @@ class CreateArrayProductsTable extends Migration
         Schema::create('array_products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('array_id')->unsigned();
-			$table->foreign('array_id')->references('id')->on('arrays')->onUpdate('cascade');
+			$table->foreign('array_id')->references('id')->on('arrays')->onUpdate('cascade')->onDelete('cascade');
 			$table->integer('product_id')->unsigned();
-			$table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade');
+			$table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('Cantidad');
             $table->timestamps();
         });
