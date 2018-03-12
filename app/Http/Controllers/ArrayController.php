@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use App\My_Array;
 use App\User;
-use App\StatusArray;
+use App\CategoryProduct;
 use App\Product;
 use App\ArrayProduct;
 
@@ -24,64 +24,21 @@ class ArrayController extends Controller
 
     public function create()
     {
-        //->where('category_id','1')
-        $flores = Product::orderBy('NombreProducto','ASC')->where('category_id',1)->get();
-        $tallos = Product::orderBy('NombreProducto','ASC')->where('category_id',2)->get();
-        $rollos = Product::orderBy('NombreProducto','ASC')->where('category_id',3)->get();
-        $bases = Product::orderBy('NombreProducto','ASC')->where('category_id',4)->get();
-        $papels = Product::orderBy('NombreProducto','ASC')->where('category_id',5)->get();
-        $listones = Product::orderBy('NombreProducto','ASC')->where('category_id',6)->get();
-        $extras = Product::orderBy('NombreProducto','ASC')->where('category_id',7)->get();
+        $categorias = CategoryProduct::orderBy('name','ASC')->get();
         $array = new My_Array;
-        return view ('ArrayCRUD.create',compact('array','flores','tallos','rollos','bases','papels','listones','extras'));
+        return view ('ArrayCRUD.create',compact('array','categorias'));
     }
 
     public function store(ArrayStoreRequest $request)
     {
-        
         $array = My_Array::create($request->all());
       
-        if($request->flores != 0){
-            foreach ($request->flores as $flore){
-                $array->products()->attach($flore,['Cantidad'=>$request->Cantidad[$flore]]);
+        if($request->productos != 0){
+            foreach ($request->productos as $producto){
+                $array->products()->attach($producto,['Cantidad'=>$request->Cantidad[$producto]]);
             }
         }
 
-        if($request->tallos != 0){
-            foreach ($request->tallos as $tallo){
-                $array->products()->attach($tallo,['Cantidad'=>$request->Cantidad[$tallo]]);
-            }
-        }
-
-        if($request->rollos != 0){
-            foreach ($request->rollos as $rollo){
-                $array->products()->attach($rollo,['Cantidad'=>$request->Cantidad[$rollo]]);
-            }
-        }
-
-        if($request->bases != 0){
-            foreach ($request->bases as $base){
-                $array->products()->attach($base,['Cantidad'=>$request->Cantidad[$base]]);
-            }
-        }
-
-        if($request->papels != 0){
-            foreach ($request->papels as $papel){
-                $array->products()->attach($papel,['Cantidad'=>$request->Cantidad[$papel]]);
-            }
-        }
-
-        if($request->listones != 0){
-            foreach ($request->listones as $listone){
-                $array->products()->attach($listone,['Cantidad'=>$request->Cantidad[$listone]]);
-            }
-        }
-
-        if($request->extras != 0){
-            foreach ($request->extras as $extra){
-                $array->products()->attach($extra,['Cantidad'=>$request->Cantidad[$extra]]);
-            }
-        }
 
         if ($request->file('imagen')){
             $path =Storage::disk('public')->put('img/arreglos', $request->file('imagen'));
@@ -98,9 +55,9 @@ class ArrayController extends Controller
 
     public function edit($id)
     {
-        $productos = Product::orderBy('NombreProducto','ASC')->where('category_id',1)->get();
+        $categorias = CategoryProduct::orderBy('name','ASC')->get();
         $array = My_Array::findOrFail($id);
-        return view('ArrayCRUD.edit',compact('array','productos'));
+        return view('ArrayCRUD.edit',compact('array','categorias'));
     }
 
 
@@ -111,9 +68,8 @@ class ArrayController extends Controller
         $array->fill($request->all())->save();
         if($request->productos != 0){
             foreach ($request->productos as $producto){
-                //dd($producto);
-                DB::insert('insert into array_products (array_id, product_id, Cantidad) values (?,?,?)', [$array->id,$producto, $request->Cantidad[$producto]]);
-                //$array->products()->sync($producto);
+                $array->products()->sync([]);
+                $array->products()->attach($producto,['Cantidad'=>$request->Cantidad[$producto]]);
             }
         }
 
@@ -128,12 +84,7 @@ class ArrayController extends Controller
         
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         if(file_exists(public_path(substr(My_array::findOrFail($id)->imagen,19)))){

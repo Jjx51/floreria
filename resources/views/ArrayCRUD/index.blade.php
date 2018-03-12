@@ -24,7 +24,8 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2>Lista de Arreglos
-					<a href="{{ route('Array.create') }}" class="btn btn-primary pull-right">Crear Nuevo Arreglo</a>
+					<a href="{{ route('Array.create') }}" class="btn btn-primary pull-right">
+						Crear Nuevo Arreglo</a>
 					</h2>
 					<br>
 				</div>

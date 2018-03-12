@@ -27,13 +27,7 @@
 					
 						@include('ArrayCRUD.form',[
                             'array'=>$array,  
-                            'flores' =>$flores,
-                            'tallos'=>$tallos,
-                            'rollos'=>$rollos,
-                            'bases' => $bases,
-                            'papel' => $papels,
-                            'listones' => $listones,
-                            'extras' => $extras,     
+                            'categorias' =>$categorias,   
                             'url' => '/Array/'.$array->id, 
                             'method' => 'PUT',
                             'before' => 'csrf'])

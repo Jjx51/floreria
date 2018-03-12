@@ -1,3 +1,6 @@
+   
+
+
 {!! Form::open(['url' => $url,'method' => $method, 'files'=>true ]) !!}
 
 		<div class="form-group" align="center">
@@ -28,118 +31,7 @@
 		</div>
         <br><hr>            
     
-<div class="form-group"><br><hr>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $bases->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($bases as $base )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$base->id.']', 0, 24)}};
-						{{ Form::checkbox('bases[]', $base->id ) }}  {{ $base->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $papels->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($papels as $papel )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$papel->id.']', 0, 24)}};
-						{{ Form::checkbox('papels[]', $papel->id ) }}  {{ $papel->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $listones->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($listones as $listone )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$listone->id.']', 0, 24)}};
-						{{ Form::checkbox('listones[]', $listone->id ) }}  {{ $listone->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $extras->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($extras as $extra )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$extra->id.']', 0, 24)}};
-						{{ Form::checkbox('extras[]', $extra->id ) }}  {{ $extra->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $rollos->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($rollos as $rollo )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$rollo->id.']', 0, 24)}};
-						{{ Form::checkbox('rollos[]', $rollo->id ) }}  {{ $rollo->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $tallos->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($tallos as $tallo )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$tallo->id.']', 0, 24)}};
-						{{ Form::checkbox('tallos[]', $tallo->id ) }}  {{ $tallo->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="col-sm-3 col-sm-offset-1 panel panel-default">
-			<div class="panel-heading">
-				<h3 aling="center">{{ $flores->first()->category->name }}</h3>
-			</div>
-			<div class="panel-body form-group" align="left">
-				@foreach ($flores as $flore )
-					<lavel>
-						{{ Form::selectRange('Cantidad['.$flore->id.']', 0, 24)}};
-						{{ Form::checkbox('flores[]', $flore->id ) }}  {{ $flore->NombreProducto }}  		
-					</lavel><hr>
-				@endforeach
-			</div>
-		</div>
-
-		
-
-		
-
-</div>
-
-
-
-
-
-		<div class="form-group">
+	<div class="form-group">
 			<div class="col-sm-12">
 			<br>
 				<div class="form-group text-right">
@@ -147,4 +39,31 @@
 				</div>
 			</div>
 		</div>
+	
+
+		<div class="form-group"><br><hr>
+			@foreach ($categorias as $categoria)
+				<div class="panel-group">
+					<div class="panel panel-default col-sm-8 col-sm-offset-2 panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<a data-toggle="collapse" href="#{{$categoria->name}}"><h3 aling-text="center">{{$categoria->name}}</h3></a>
+							</h3>
+						</div>
+						<div id="{{$categoria->name}}" class="panel-collapse collapse">
+							<div class="panel-body">
+
+								@foreach ($categoria->Products as $producto )
+									<lavel>
+										{{ Form::selectRange('Cantidad['.$producto->id.']', 0, 24)}};
+										{{ Form::checkbox('productos[]', $producto->id ) }}  {{ $producto->NombreProducto }}  		
+									</lavel><hr>
+								@endforeach			
+							</div>
+						</div>
+					</div>
+				</div>
+			@endforeach
+		</div>
+
 {!! Form::close() !!}
