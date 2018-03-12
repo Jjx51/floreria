@@ -12,4 +12,8 @@ class Product extends Model
     public function Category(){
         return $this -> belongsTo('App\CategoryProduct','category_id','id');
     }
+
+    public function my_arrays(){
+        return $this->belongsToMany('App\My_Array','array_products','array_id','product_id')->withPivot('Cantidad');
+    } 
 }
