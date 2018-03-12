@@ -25,7 +25,18 @@
                     <div class="panel-heading text-center lead"><strong>Crear nuevo arreglo de flores</strong></div>
                     <div class="panel-body">
 					
-						@include('ArrayCRUD.form',['array'=>$array, 'url' => '/Array/'.$array->id, 'method' => 'PUT','before' => 'csrf'])
+						@include('ArrayCRUD.form',[
+                            'array'=>$array,  
+                            'flores' =>$flores,
+                            'tallos'=>$tallos,
+                            'rollos'=>$rollos,
+                            'bases' => $bases,
+                            'papel' => $papels,
+                            'listones' => $listones,
+                            'extras' => $extras,     
+                            'url' => '/Array/'.$array->id, 
+                            'method' => 'PUT',
+                            'before' => 'csrf'])
 
                     </div>
                     </div>

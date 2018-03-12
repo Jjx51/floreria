@@ -32,8 +32,8 @@
 				<div class="panel-body">
 					@foreach ($arrays as $array)
 						<div class="row">
-							<div class="col-md-4">
-							
+							<div class="col-md-4" align="center">
+								<h4>{{$array->Nombre}}</h4>
 								@if ($array->imagen)
 									<img  class='img-thumbnail' width="220" height="220" src="{{$array->imagen}}">
 									
@@ -44,10 +44,26 @@
 								
 
 							</div>
-							<div class="col-md-4">
-								<h4>id: {{$array->id}}</h4>
+							<div class="col-md-4" align="center">
 								<h4>Codigo: {{$array->Codigo}}</h4>
-								<h4>nombre; {{$array->Nombre}}</h4>
+								
+								<table class="table table-striped">
+									<thead>
+										<tr >
+											<th>Nombre</th>
+											<th align="center">Cantidad</th>
+										</tr>
+									</thead>
+									<tbody>
+										@foreach ($array->products as $producto)
+											<tr>
+												<td>{{$producto->NombreProducto }}</td>
+												<td align="center">{{$producto->pivot->Cantidad }}</td>
+											</tr>
+										@endforeach
+									</tbody>
+								</table>
+								
 								
 							</div>
 

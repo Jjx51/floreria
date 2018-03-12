@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ArrayStoreRequest;
 use App\Http\Requests\ArrayUpdateRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 use App\My_Array;
 use App\User;
 use App\StatusArray;
@@ -14,86 +15,107 @@ use App\ArrayProduct;
 
 class ArrayController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $arrays = My_Array::orderBy('id','DESC')->paginate(3);
         return view('ArrayCRUD.index',compact('arrays'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //->where('category_id','1')
-        $products = Product::orderBy('NombreProducto','ACD')->pluck('NombreProducto','id');
+        $flores = Product::orderBy('NombreProducto','ASC')->where('category_id',1)->get();
+        $tallos = Product::orderBy('NombreProducto','ASC')->where('category_id',2)->get();
+        $rollos = Product::orderBy('NombreProducto','ASC')->where('category_id',3)->get();
+        $bases = Product::orderBy('NombreProducto','ASC')->where('category_id',4)->get();
+        $papels = Product::orderBy('NombreProducto','ASC')->where('category_id',5)->get();
+        $listones = Product::orderBy('NombreProducto','ASC')->where('category_id',6)->get();
+        $extras = Product::orderBy('NombreProducto','ASC')->where('category_id',7)->get();
         $array = new My_Array;
-        return view ('ArrayCRUD.create',compact('array','products'));
+        return view ('ArrayCRUD.create',compact('array','flores','tallos','rollos','bases','papels','listones','extras'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(ArrayStoreRequest $request)
     {
+        
         $array = My_Array::create($request->all());
+      
+        if($request->flores != 0){
+            foreach ($request->flores as $flore){
+                $array->products()->attach($flore,['Cantidad'=>$request->Cantidad[$flore]]);
+            }
+        }
+
+        if($request->tallos != 0){
+            foreach ($request->tallos as $tallo){
+                $array->products()->attach($tallo,['Cantidad'=>$request->Cantidad[$tallo]]);
+            }
+        }
+
+        if($request->rollos != 0){
+            foreach ($request->rollos as $rollo){
+                $array->products()->attach($rollo,['Cantidad'=>$request->Cantidad[$rollo]]);
+            }
+        }
+
+        if($request->bases != 0){
+            foreach ($request->bases as $base){
+                $array->products()->attach($base,['Cantidad'=>$request->Cantidad[$base]]);
+            }
+        }
+
+        if($request->papels != 0){
+            foreach ($request->papels as $papel){
+                $array->products()->attach($papel,['Cantidad'=>$request->Cantidad[$papel]]);
+            }
+        }
+
+        if($request->listones != 0){
+            foreach ($request->listones as $listone){
+                $array->products()->attach($listone,['Cantidad'=>$request->Cantidad[$listone]]);
+            }
+        }
+
+        if($request->extras != 0){
+            foreach ($request->extras as $extra){
+                $array->products()->attach($extra,['Cantidad'=>$request->Cantidad[$extra]]);
+            }
+        }
+
         if ($request->file('imagen')){
             $path =Storage::disk('public')->put('img/arreglos', $request->file('imagen'));
             $array->fill(['imagen'=>asset($path)])->save();
 
         }
         return redirect("/Array");
-        
-        
-       
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        $products = Product::orderBy('NombreProducto','ACD')->pluck('NombreProducto','id');
+        $productos = Product::orderBy('NombreProducto','ASC')->where('category_id',1)->get();
         $array = My_Array::findOrFail($id);
-        return view('ArrayCRUD.edit',compact('array','products'));
+        return view('ArrayCRUD.edit',compact('array','productos'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(ArrayUpdateRequest $request, $id)
     {
         $array = My_array::findOrFail($id);
         $borrar = $array->imagen;
         $array->fill($request->all())->save();
+        if($request->productos != 0){
+            foreach ($request->productos as $producto){
+                //dd($producto);
+                DB::insert('insert into array_products (array_id, product_id, Cantidad) values (?,?,?)', [$array->id,$producto, $request->Cantidad[$producto]]);
+                //$array->products()->sync($producto);
+            }
+        }
 
 
         if ($request->file('imagen')){
