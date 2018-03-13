@@ -15,15 +15,17 @@
 */
 
 Route::view('/', 'welcome');
-Route::view('/inicio', 'home.index')->name('inicio');
+//Route::view('/inicio', 'home.index')->name('inicio');
 
 Auth::routes();
 
-//Route::get('/inicio', 'HomeController@index')->name('inicio');
+Route::get('/inicio', 'HomeController@index')->name('inicio');
+Route::post('/inicio', 'HomeController@show')->name('inicio.show');
+
 /*Rutas de home*/
-Route::get('/inicio/venta/{id}', 'HomeController@venta')->name('inicio.venta')->where(['id'=>'[\d]+']);
-Route::get('/inicio/mostrador/{id}', 'HomeController@mostrador')->name('inicio.mostrador')->where(['id'=>'[\d]+']);
-Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido')->where(['id'=>'[\d]+']);
+Route::get('/inicio/venta/{id}', 'HomeController@venta')->name('inicio.venta');
+Route::get('/inicio/mostrador/{id}', 'HomeController@mostrador')->name('inicio.mostrador');
+Route::get('/inicio/pedido/{id}', 'HomeController@pedido')->name('inicio.pedido');
 
 /*Rutas de usuarios*/
 Route::get('/usuarios', 'AuthController@index')->name('usuarios.index');

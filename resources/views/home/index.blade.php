@@ -17,40 +17,52 @@
         @include('partials.alert')
         @include('partials.errors')
 
-        <div class="row">
-            <form>
-                <div class="form-group">
-                    <label for="inputcodigo" class="col-lg-1 col-md-1 col-sm-1 control-label text-center letra150 margen-superior2 margen-derecho margen-izquierdo">Código</label>
-
-                    <div class="col-lg-9 col-md-9 col-sm-7 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 margen-superior2">
-                        <input type="text" id="inputcodigo" class="form-control" placeholder="Ingresa aquí el código">
-                    </div> 
-
-                    <div class="col-lg-1 col-md-1 col-sm-1">
-                        <button type="submit" class="btn btn-default margen-izquierdo margen-superior2 text-center">Agregar</button>
-                    </div>   
+        @if(empty($codigo))
+            <div class="row">
+                <form method="POST" action="{{ route('inicio.show') }}">
                     
+                    <div class="form-group">
+                        <label for="inputcodigo" class="col-lg-1 col-md-1 col-sm-1 control-label text-center letra150 margen-superior2 margen-derecho margen-izquierdo">Código</label>
+
+                        <div class="col-lg-9 col-md-9 col-sm-7 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 margen-superior2">
+                            <input type="text" id="inputcodigo" class="form-control" placeholder="Ingresa aquí el código" name="codigo">
+                        </div> 
+
+                        {{ csrf_field() }}
+
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+                            <button type="submit" class="btn btn-default margen-izquierdo margen-superior2 text-center">Agregar</button>
+                        </div>   
+                        
+                    </div>
+                </form>
+            </div>
+        @endif
+        
+        @if(!empty($codigo))
+            <h3>Código seleccionado: {{ $codigo }} </h3>
+
+            <input type="hidden" name="codigo" id="codigo" value="{{ $codigo }}">
+
+            <div class="row margen-superior">
+                <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
+                    <button onclick="Venta()" type="button" class="btn btn-default btn-lg btn-block">Venta</button>
+                </div> 
+                        
+                <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
+                    <button onclick="Pedido()" type="button" class="btn btn-default btn-lg btn-block">Pedido</button>
                 </div>
-            </form>
-        </div>
 
-        <div class="row margen-superior">
-            <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
-                <button onclick="Venta()" type="button" class="btn btn-default btn-lg btn-block">Venta</button>
-            </div> 
+                <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
+                    <button onclick="Mostrador()" type="button" class="btn btn-default btn-lg btn-block">Mostrador</button>
+                </div>
+            </div>
+
+            <div id="cambia-contenido">
                     
-            <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
-                <button onclick="Pedido()" type="button" class="btn btn-default btn-lg btn-block">Pedido</button>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 margen-superior2">
-                <button onclick="Mostrador()" type="button" class="btn btn-default btn-lg btn-block">Mostrador</button>
-            </div>
-        </div>
-
-        <div id="cambia-contenido">
-                
-        </div>
+        @endif
         
     </div>
 @endsection

@@ -1,4 +1,7 @@
-var resultado = document.getElementById("cambia-contenido"); 
+var resultado = document.getElementById("cambia-contenido");
+var codigo= document.getElementById("codigo").value;
+String(codigo);
+
      function Pedido(){ 
         var xmlhttp;
          /*Peticiones para cualquier navegador*/
@@ -12,9 +15,11 @@ var resultado = document.getElementById("cambia-contenido");
                 resultado.innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET", "inicio/pedido/1", true);
+        
+        xmlhttp.open("GET","inicio/pedido/"+codigo, true);
         xmlhttp.send();
-     } 
+     }
+
     function Venta(){ 
         var xmlhttp;
          /*Peticiones para cualquier navegador*/
@@ -28,9 +33,10 @@ var resultado = document.getElementById("cambia-contenido");
                 resultado.innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET", "inicio/venta/1", true);
+        xmlhttp.open("GET", "inicio/venta/"+codigo, true);
         xmlhttp.send();           
-     }  
+    }
+
      function Mostrador(){ 
         var xmlhttp;
          /*Peticiones para cualquier navegador*/
@@ -44,6 +50,6 @@ var resultado = document.getElementById("cambia-contenido");
                 resultado.innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET", "inicio/mostrador/1", true);
+        xmlhttp.open("GET", "inicio/mostrador/"+codigo, true);
         xmlhttp.send();          
      } 

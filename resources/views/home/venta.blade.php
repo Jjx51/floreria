@@ -18,7 +18,7 @@
 		<div class="col-md-12 margen-inferior">
 
 			<div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1">
-				<a href="#" type="button" class="btn btn-default btn-block margen-inferior">Cancelar</a>
+				<a href="{{ route('inicio') }}" type="button" class="btn btn-default btn-block margen-inferior">Cancelar</a>
 		    </div>
 			
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 ">
