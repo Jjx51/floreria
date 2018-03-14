@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->foreign('category_id')->references('id')->on('category_products')->onupdate('cascade')->onDelete('cascade');
             $table->float('Cantidad', 8, 2);
             $table->integer('merma');
+            $table->float('precio', 8, 2);
             $table->timestamps();
         });
     }

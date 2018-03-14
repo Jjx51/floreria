@@ -27,6 +27,7 @@
 							<th class="text-center">Categoria</th>
 							<th class="text-center">Cantidad</th>
 							<th class="text-center">Merma</th>
+							<th class="text-center">Precio</th>
 			                <th class="text-center">Acción 1</th>
 							<th class="text-center">Acción 2</th>
 			            </tr>
@@ -39,6 +40,7 @@
 								<td> {{ $product->Category->name }}  </td>
 								<td> {{ $product->Cantidad }}  </td>
 								<td> {{ $product->merma }}  </td>
+								<td> {{ $product->precio }}  </td>
 								<td>
 									<div class="form-group" align="right">
 								 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-primary">Editar</a> 
