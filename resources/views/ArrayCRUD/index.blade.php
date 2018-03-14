@@ -69,6 +69,7 @@
 							</div>
 
 							<div class="col-md-4">
+								<h3> Precio: {{ $array->precio }}	</h3>
 								<div class="form-group">
 									<a href="{{url('/Array/'.$array->id.'/edit')}}" class="btn btn-success btn-block">Editar</a> 
 								</div>

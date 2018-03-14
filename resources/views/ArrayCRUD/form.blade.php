@@ -23,6 +23,15 @@
 
 		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
+				{{Form::label('Precio', 'Precio')}}
+			</div>
+			<div class="col-sm-9 col-xs-12"><br>
+				{{ Form::text('precio', $array->precio,['class'=>'form-control','placeholder'=>'Precio'])}}
+			</div>
+		</div>
+
+		<div class="form-group" align="center">
+			<div class="col-sm-3 col-xs-12"><br>
 				{{Form::label('img', 'Imagen')}}
 			</div>
 			<div class="col-sm-9 col-xs-12"><br>

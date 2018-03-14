@@ -16,24 +16,29 @@ class ArreglosSeeder extends Seeder
             'Codigo'=>'FA-01',
             'Nombre' => 'Romance 1',
             'imagen' => 'img/arreglos/FA-01.jpg',
+            'precio' => 100,
+            
         ]);
 
         My_Array::create([
             'Codigo'=>'FA-02',
             'Nombre' => 'Romance 2',
             'imagen' => 'img/arreglos/FA-02.jpg',
+            'precio' => 100,
         ]);
 
         My_Array::create([
             'Codigo'=>'FA-03',
             'Nombre' => 'Romance 3',
             'imagen' => 'img/arreglos/FA-03.jpg',
+            'precio' => 100,
         ]);
 
         My_Array::create([
             'Codigo'=>'FA-04',
             'Nombre' => 'Romance 4',
             'imagen' => 'img/arreglos/FA-04.jpg',
+            'precio' => 100,
         ]);
     }
 }
