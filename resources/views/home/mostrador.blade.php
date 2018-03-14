@@ -1,14 +1,32 @@
-<h3 class="text-center">Nombre del Producto</h3>
+<div class="text-center margen-superior margen-inferior">
+	<h3>{{ $arreglo->Nombre }}</h3>
+	
+</div>
 
-<div class="borde margen-inferior">
+<div class="borde margen-inferior pedido-home">
 	<div class="row margen-inferior margen-superior">
 		<div class="col-lg-12 col-md-12 col-sm-12 margen-superior">
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<img src="img/ejemplo.jpeg " width="100%" alt="" class="img-rounded img-responsive imagen-home">
+				<img src="{{ $arreglo->imagen }}" width="220" height="220" alt="" class="img-rounded img-responsive imagen-home">
 			</div>
 			<div class="col-lg-8 col-md-8 col-sm-8">
 				<p>Descripcion</p>
-				<textarea class="form-control" rows="9"></textarea>
+				<table class="table table-striped">
+					<thead>
+						<tr >
+							<th>Nombre</th>
+							<th align="center">Cantidad</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach ($arreglo->products as $producto)
+							<tr>
+								<td>{{$producto->NombreProducto }}</td>
+								<td align="center">{{$producto->pivot->Cantidad }}</td>
+							</tr>
+						@endforeach
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

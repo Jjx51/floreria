@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\My_Array;
 
 class HomeController extends Controller
 {
@@ -27,19 +28,29 @@ class HomeController extends Controller
 
     public function show(Request $request){
         $codigo = $request->input('codigo');
-        return view('home.index',compact('codigo'));
+        $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
+
+        if($arreglo){
+            return view('home.index',compact('codigo'));    
+        }
+        return redirect()-> route('inicio')->with('danger','Codigo no enocontrado');
+        
+        
     }
 
-    public function venta($id){
-        return view('home.venta',compact('id'));
+    public function venta($codigo){
+        $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
+        return view('home.venta',compact('arreglo'));
     }
 
-    public function mostrador($id){
-        return view('home.mostrador',compact('id'));
+    public function mostrador($codigo){
+        $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
+        return view('home.mostrador',compact('arreglo'));
     }
 
-    public function pedido($id){
-        return view('home.pedido',compact('id'));
+    public function pedido($codigo){
+        $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
+        return view('home.pedido',compact('arreglo'));
     }
 
 
