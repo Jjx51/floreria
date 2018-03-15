@@ -41,16 +41,6 @@
                         @auth
                             <!--Pestañas de usuario normal-->
                             <li class="hidden-sm"><a name="inicio" href="{{ route('inicio') }}">Inicio</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" name="inventario" href="#">Nuevo<span class="caret"></span></a>
-                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ url("/Categoryp") }}">Categorias</a>
-                                        <a href="{{ url("/Product") }}">Productos</a>
-                                        <a href="{{ url("/Array") }}">Arreglos</a>
-                                    </li>
-                                </ul>
-                            </li>
 
                             <li><a name="merma" href="{{ url('merma') }}">Merma</a></li>
                             <li><a name="Repartidor" href="{{ url('repartidor') }}">Repartidor</a></li>
@@ -60,6 +50,16 @@
                             @if(Auth::user()->rol=='admin')
                                 <li><a name="Reportes" href="{{ route('reports.index') }}">Reportes</a></li>
                                 <li><a name="Panel" href="{{ route('usuarios.index') }}"><div class="hidden-sm">Panel de usuarios</div><div class="visible-sm">Panel</div></a></li>
+                                <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" name="inventario" href="#">Panel de <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ url("/Categoryp") }}">Categorias</a>
+                                        <a href="{{ url("/Product") }}">Productos</a>
+                                        <a href="{{ url("/Array") }}">Arreglos</a>
+                                    </li>
+                                </ul>
+                            </li>
                             @endif
                         @endauth
                     </ul>

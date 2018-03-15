@@ -25,7 +25,7 @@
                         <label for="inputcodigo" class="col-lg-1 col-md-1 col-sm-1 control-label text-center letra150 margen-superior2 margen-derecho margen-izquierdo">Código</label>
 
                         <div class="col-lg-9 col-md-9 col-sm-7 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 margen-superior2">
-                            <input type="text" id="inputcodigo" class="form-control" placeholder="Ingresa aquí el código" name="codigo">
+                            <input type="text" id="inputcodigo" class="form-control" placeholder="Ingresa aquí el código" name="codigo" required>
                         </div> 
 
                         {{ csrf_field() }}
