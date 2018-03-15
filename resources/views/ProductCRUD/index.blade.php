@@ -8,9 +8,19 @@
 
 
 @section('content')
+
+
 	<div class="container">
 		<h1 class="text-center">Lista de Productos</h1>
 	</div>
+<div class="container">
+	<div class="row">
+        <div class="col-md-8 col-md-offset-2">
+			@include('partials.alert')
+			@include('partials.errors')
+        </div>
+	</div>
+</div>
 	<div class="row row margen-superior margen-inferior">
   			<div class="col-sm-offset-4 col-sm-4">
 			  	<a href="{{ route('Product.create') }}" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
