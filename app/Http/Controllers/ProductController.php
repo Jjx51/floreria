@@ -78,4 +78,21 @@ class ProductController extends Controller
         Product::destroy($id);
         return redirect('/Product');
     }
+
+    public function agregar($id, $agregar)
+    {
+        $product = Product::findOrFail($id);
+        $product->fill(['Cantidad'=>$product->Cantidad+$agregar]);
+        $product->save();
+        return redirect('/Product');
+    }
+
+    public function descontar($id, $descontar)
+    {
+        $product = Product::findOrFail($id);
+        $product->fill(['Cantidad'=>$product->Cantidad-$descontar]);
+        $product->save();
+        return redirect('/Product');
+    }
+
 }

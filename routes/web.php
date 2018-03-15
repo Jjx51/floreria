@@ -36,6 +36,8 @@ Route::delete('/usuarios', 'AuthController@delete')->name('usuarios.delete');
 
 
 Route::resource('Categoryp', 'CategoryProductController');
+Route::get('Product/{id}/{agregar}/agregar', 'ProductController@agregar')->name('AgregarProducto');
+Route::get('Product/{id}/{descontar}/descontar', 'ProductController@descontar')->name('DescontarProducto');
 Route::resource('Product', 'ProductController');
 Route::resource('Array', 'ArrayController');
 Route::resource('ArrayProduct', 'ArrayProductController');
@@ -43,5 +45,5 @@ Route::resource('ArrayProduct', 'ArrayProductController');
 Route::get('/reportes','ReportsController@index')->name('reports.index');
 Route::get('/florista','OrderController@index')->name('order.florista');
 Route::get('/repartidor','OrderController@indexrepartidor')->name('order.repartidor');
-Route::get('/merma','WasteController@index')->name('waste.index');
-Route::get('/venta-manual','arrayOrder@index')->name('arrayorder.index');
+//Route::get('/merma','WasteController@index')->name('waste.index');
+//Route::get('/venta-manual','arrayOrder@index')->name('arrayorder.index');
