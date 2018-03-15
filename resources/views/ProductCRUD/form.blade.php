@@ -27,12 +27,14 @@
 			</div>
 		</div>
 
+		{{ Form::hidden('merma', 0) }}
+
 		<div class="form-group" align="center">
 			<div class="col-sm-3 col-xs-12"><br>
-				{{Form::label('merma', 'merma')}}
+				{{Form::label('precio', 'precio')}}
 			</div>
 			<div class="col-sm-9 col-xs-12"><br>
-				{{ Form::text('merma', $product->merma,['class'=>'form-control','placeholder'=>'merma'])}}
+				{{ Form::text('precio', $product->precio,['class'=>'form-control','placeholder'=>'merma'])}}
 			</div>
 		</div>
 

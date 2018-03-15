@@ -34,6 +34,7 @@ class ProductController extends Controller
             $product->category_id = $request->category_id;
             $product->Cantidad = $request->Cantidad;
             $product->merma = 0;
+            $product->precio = $request->precio;
             return view("/ProductCRUD.create",["product" => $product]);
         }
     }
@@ -57,6 +58,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->Cantidad = $request->Cantidad;
         $product->merma = $request->merma;
+        $product->precio = $request->precio;
         
         if ($product->save()) {
             return redirect("/Product");

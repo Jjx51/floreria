@@ -18,6 +18,7 @@ class CreateArraysTable extends Migration
             $table->string('Codigo',10)->unique();
             $table->string('Nombre',30);
             $table->string('imagen',128)->nullable();
+            $table->float('precio', 8, 2);
             $table->timestamps();
         });
     }
