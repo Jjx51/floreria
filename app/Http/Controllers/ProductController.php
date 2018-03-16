@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\CategoryProduct;
+use App\My_Array;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -85,14 +86,24 @@ class ProductController extends Controller
         $product->fill(['Cantidad'=>$product->Cantidad+$agregar]);
         $product->save();
         return redirect('/Product');
+        //return redirect()-> route('Product.index')->with('info','se aumento el inventario');
+
     }
 
-    public function descontar($id, $descontar)
+    public function descontar($id)
     {
-        $product = Product::findOrFail($id);
-        $product->fill(['Cantidad'=>$product->Cantidad-$descontar]);
-        $product->save();
+        $arreglo = My_Array::findOrFail($id);
+        foreach ($arreglo->products as $product) {
+            $idp = $product->id;
+            $descuento = $product->pivot->Cantidad;
+            $descontarA = Product::findOrFail($idp);
+            $descontarA->fill(['Cantidad'=>$descontarA->Cantidad-$descuento]);
+            $descontarA->save();
+
+        }
+        
         return redirect('/Product');
+        //return redirect()-> route('Product.index')->with('danger','El inventario a cambiado');
     }
 
 }

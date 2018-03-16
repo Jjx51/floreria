@@ -36,8 +36,8 @@ Route::delete('/usuarios', 'AuthController@delete')->name('usuarios.delete');
 
 
 Route::resource('Categoryp', 'CategoryProductController');
-Route::get('Product/{id}/{agregar}/agregar', 'ProductController@agregar')->name('AgregarProducto');
-Route::get('Product/{id}/{descontar}/descontar', 'ProductController@descontar')->name('DescontarProducto');
+Route::put('Product/agregar/{id}', 'ProductController@agregar')->name('AgregarProducto');
+Route::put('Product/descontar/{id}', 'ProductController@descontar')->name('DescontarProducto');
 Route::resource('Product', 'ProductController');
 Route::resource('Array', 'ArrayController');
 Route::resource('ArrayProduct', 'ArrayProductController');
