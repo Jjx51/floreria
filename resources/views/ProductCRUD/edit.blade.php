@@ -1,15 +1,23 @@
 @extends('layouts.app')
 
+@section('head')
+	<link rel="stylesheet" href="{{ asset('css/misestilos.css') }}">
+@endsection
 
 @section('content')
-	<div class="container">
-		<h1 class="text-center">Editar Categoria</h1>
-	</div>
 
 	<div class="container">
 		<div class="row">
-	@include('ProductCRUD.form',['product'=>$product, 'url' => '/Product/'.$product->id, 'method' => 'PUT','before' => 'csrf'])
-
+			<div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center lead"><strong>Edición de producto</strong></div>
+                    <div class="panel-body">                       
+                       @include('ProductCRUD.form',['product'=>$product, 'url' => '/Product/'.$product->id, 'method' => 'PUT','before' => 'csrf'])
+                       
+                    </div>
+                </div>
+            </div>
+			
 		</div>
 	</div>
 	

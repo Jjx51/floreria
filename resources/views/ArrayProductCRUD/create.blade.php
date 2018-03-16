@@ -24,11 +24,11 @@
                        @include('ArrayProductCRUD.form',['arrayproduct'=>$arrayproduct, 'products'=>$products, 'url' => '/ArrayProduct', 'method' => 'POST','before' => 'csrf'])
                        
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 @endsection
 
 @section('javascript')
