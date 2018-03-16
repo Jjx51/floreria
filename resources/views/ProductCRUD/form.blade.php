@@ -28,7 +28,7 @@
 					{{Form::label('Cantidad', 'Cantidad')}}
 				</div>
 				<div class="col-sm-9 col-xs-12"><br>
-					{{ Form::text('Cantidad', $product->Cantidad,['class'=>'form-control','placeholder'=>'Cantidad'])}}
+					{{ Form::number('Cantidad', $product->Cantidad,['class'=>'form-control','placeholder'=>'Cantidad'])}}
 				</div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 					{{Form::label('precio', 'Precio')}}
 				</div>
 				<div class="col-sm-9 col-xs-12"><br>
-					{{ Form::text('precio', $product->precio,['class'=>'form-control','placeholder'=>'merma'])}}
+					{{ Form::number('precio', $product->precio,['class'=>'form-control','placeholder'=>'Precio'])}}
 				</div>
 			</div>
 		</div>

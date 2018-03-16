@@ -18,6 +18,8 @@
 			    </div>
 		</div>
 	</div>
+	
+	<!--ADASDASDASD-->
 	<div class="container">
   		<div class="row">
   			<div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 ">
@@ -45,11 +47,11 @@
 									<td> {{ $product->merma }}  </td>
 									<td> {{ $product->precio }}  </td>
 									<td>
-										<div class="form-group" align="right">
+										<div class="form-group" align="center">
 									 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-primary">Editar</a> 
 									 	</div>
 									</td>
-									 <td align="left">
+									 <td align="center">
 										@include('ProductCRUD.delete',['product'=> $product])
 									</td>
 								</tr>
