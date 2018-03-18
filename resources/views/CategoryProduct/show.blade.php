@@ -11,8 +11,9 @@
 	<div class="container">
 		<h1 class="text-center">Productos de la Categoria : {{ $nombre }}</h1>
 	</div>
+
 	<div class="container">
-  		<div class="row ">
+  		
   			<div class="table-responsive color-tabla margen-superior">
 			  	<table id="example" class="table table-striped  text-center " cellspacing="0" width="100%">
 			        <thead>
@@ -24,7 +25,6 @@
 			            </tr>
 			        </thead>
 			        <tbody>
-						
 						@foreach ($productos as $producto)
 							<tr>
 								<td> {{ $producto->id }}  </td>
@@ -33,13 +33,10 @@
 								<td> {{ $producto->merma }} </td>
 							</tr>
 						@endforeach
-							
-			        	
 			        </tbody>
 			    </table>
 			</div>
-  		</div>
-  		
+  		 		
   	</div>
 
 
@@ -58,8 +55,5 @@
             } );
         } );
     </script>
-
-    <script type="text/javascript" src="{{ asset('js/lightbox.js') }}"></script>
-
 
 @endsection

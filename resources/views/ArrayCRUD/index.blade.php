@@ -36,6 +36,7 @@
 			</div>
 
 			<div class="panel-body">
+				
 				@foreach ($arrays as $array)
 					<div class="row">
 						<div class="col-md-4 col-sm-6" align="center">
@@ -48,7 +49,7 @@
 						</div>
 
 						<div class="col-md-4 col-sm-6" align="center">
-							<h4>Codigo: {{$array->Codigo}}</h4>
+							<h4>Código: {{$array->Codigo}}</h4>
 								
 							<table class="table table-striped">
 								<thead>

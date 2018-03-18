@@ -5,18 +5,15 @@
 @endsection
 
 
-@section('content')
-<div class="container">
-	<div class="row">
-        <div class="col-md-8 col-md-offset-2">
-			@include('partials.alert')
-			@include('partials.errors')
-        </div>
-	</div>
-</div>
-
-			
-
+    @section('content')
+    <div class="container">
+    	<div class="row">
+            <div class="col-md-8 col-md-offset-2">
+    			@include('partials.alert')
+    			@include('partials.errors')
+            </div>
+    	</div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -27,11 +24,11 @@
                        @include('ArrayProductCRUD.form',['arrayproduct'=>$arrayproduct, 'products'=>$products, 'url' => '/ArrayProduct', 'method' => 'POST','before' => 'csrf'])
                        
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 @endsection
 
 @section('javascript')
