@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ArrayOrder;
+use App\Order;
+use App\My_Array;
 
 class OrderController extends Controller
 {
@@ -81,4 +84,25 @@ class OrderController extends Controller
     {
         //
     }
+
+    public function Venta(Request $request)
+    {
+
+        $arreglo= My_Array::findOrFail($request->array_id);
+
+        $order = Order::create(['Costo'=>$arreglo->precio,'user_id'=>$request->user_id]);
+        
+        $array_order = ArrayOrder::create([
+            'array_id'      => $arreglo->id ,
+            'order_id'      => $order->id ,
+            'user_id'       => $request->user_id ,
+            'status_id'     => 1 ,
+            'cantidad'      => $request->cantidad ,
+            'pendientes'    => $request->cantidad
+        ]);
+        
+        return redirect('/inicio');
+        //return redirect()-> route('Product.index')->with('danger','El inventario a cambiado');
+    }
+
 }

@@ -43,6 +43,8 @@ Route::resource('Array', 'ArrayController');
 Route::resource('ArrayProduct', 'ArrayProductController');
 
 Route::get('/reportes','ReportsController@index')->name('reports.index');
+
+Route::post('florista/Venta', 'OrderController@Venta')->name('florista.venta');
 Route::get('/florista','OrderController@index')->name('order.florista');
 Route::get('/repartidor','OrderController@indexrepartidor')->name('order.repartidor');
 //Route::get('/merma','WasteController@index')->name('waste.index');

@@ -3,6 +3,7 @@
 	
 </div>
 
+{!! Form::open(['url'=> 'florista/Venta', 'method'=> 'POST','class'=>'form-group ','before' => 'csrf']) !!}
 <div class="borde margen-inferior pedido-home">
 	<div class="row margen-inferior margen-superior">
 		<div class="col-lg-12 col-md-12 col-sm-12 margen-superior">
@@ -27,7 +28,14 @@
 						@endforeach
 					</tbody>
 				</table>
+					{{Form::label('Cantidadl', 'Cantidad')}}
+					{{Form::text('cantidad', null, ['class'=>'form-control','placeholder'=>'Cantidad de arreglos'])}}
+					{{Form::label('personl', 'Seleccionar personal')}}
+					{{Form::select('user_id', $usuarios, ['class'=>'form-control']) }}
+					{{Form::hidden('array_id',$arreglo->id)}}
 			</div>
+
+
 		</div>
 	</div>
 	
@@ -38,18 +46,14 @@
 				<a href="{{ route('inicio') }}" type="button" class="btn btn-default btn-block margen-inferior">Cancelar</a>
 		    </div>
 			
-
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 ">
-			{!! Form::open(['url'=> '/Product/descontar/'. $arreglo->id, 'method'=> 'PUT','class'=>'form-group ','before' => 'csrf']) !!}
-<div>
-
-
-		<input type="submit" value="Agregar" class="btn btn-default btn-block margen-inferior">
-</div>
-{!! Form::close() !!}
-			
-				
+				<div>
+					<input type="submit" value="Agregar" class="btn btn-default btn-block margen-inferior">
+				</div>
 			</div>
+
 		</div>	
 	</div>
+
 </div>
+{!! Form::close() !!}
