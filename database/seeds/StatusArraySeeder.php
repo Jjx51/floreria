@@ -14,13 +14,13 @@ class StatusArraySeeder extends Seeder
     {
         //
         StatusArray::create([
-            'status'=>'Arreglo Pendiente'
+            'status_array'=>'Arreglo Pendiente'
         ]);
         StatusArray::create([
-            'status'=>'Arreglo en Contruccion'
+            'status_array'=>'Arreglo en Contruccion'
         ]);
         StatusArray::create([
-            'status'=>'Arreglo Terminado'
+            'status_array'=>'Arreglo Terminado'
         ]);
     }
 }

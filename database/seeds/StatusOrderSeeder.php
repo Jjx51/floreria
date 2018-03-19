@@ -13,23 +13,27 @@ class StatusOrderSeeder extends Seeder
     public function run()
     {
         StatusOrder::create([
-            'status' => 'En construcción'
+            'status_order' => 'En espera'
         ]);
 
         StatusOrder::create([
-            'status' => 'Listo para entrega'
+            'status_order' => 'En construcción'
         ]);
 
         StatusOrder::create([
-            'status' => 'En camino'
+            'status_order' => 'Listo para entrega'
         ]);
 
         StatusOrder::create([
-            'status' => 'Entregado'
+            'status_order' => 'En camino'
         ]);
 
         StatusOrder::create([
-            'status' => 'Entrega fallida'
+            'status_order' => 'Entregado'
+        ]);
+
+        StatusOrder::create([
+            'status_order' => 'Entrega fallida'
         ]);
     }
 }

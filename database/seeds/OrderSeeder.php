@@ -12,20 +12,24 @@ class OrderSeeder extends Seeder
         $date = Carbon::now();
         //$fecha = $carbon->formt('d-m-Y');
         Order::create([
-
+            'array_id'              => '1',
+            'cantidad'              => '2',
             'NombreCliente'         => 'floreria' ,
             'NombreDestinatario'    => 'Venta directa' ,
             'DirecionEntrega'       => 'floreria' ,
             'Referencia'            => 'no aplica' ,
-            'Phone'                 => 0 ,
-            'Costo'                 => 0 ,
+            'Phone'                 => '22-22-22-22-22' ,
+            'Costo'                 => 100 ,
             'Mensaje'               => 'no aplica' ,
+            'Prioridad'             =>  1,
             'FechaEntrega'          =>  $date->toDateString(),
             'HoraEntrega'           =>  $date->toTimeString(),
             'Bloque'                =>  1,
-            'Prioridad'             =>  1,
-            'user_id'               =>  1,
-            'status_id'             =>  1,
+            'Florista'              =>  2,
+            'Arreglo_status'        =>  1,
+            'Repartidor'            =>  3,
+            'Orden_status'          =>  1,
+            'NotaEntrega'           =>  'sin comentarios'
         ]);
 
 
