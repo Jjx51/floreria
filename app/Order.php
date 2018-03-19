@@ -6,7 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $fillable=['NombreCliente','NombreDestinatario','DirecionEntrega','Referencia','Phone','Costo','Mensaje','FechaEntrega','HoraEntrega','Bloque', 'Prioridad','user_id','status_id'];
+    protected $fillable=[
+        'array_id',          
+        'cantidad',
+        'NombreCliente',
+        'NombreDestinatario',
+        'DirecionEntrega',
+        'Referencia',
+        'Phone',
+        'Costo',
+        'Mensaje',
+        'Prioridad',
+        'FechaEntrega',
+        'HoraEntrega',
+        'Bloque',
+        'Florista',
+        'Arreglo_status',
+        'Repartidor',
+        'Order_status',
+        'Entrega',
+        'NotaEntrega'
+    ];
 
     protected $table = 'orders';
     
