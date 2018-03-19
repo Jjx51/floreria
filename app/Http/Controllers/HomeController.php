@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\My_Array;
 use App\Product;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -49,18 +50,21 @@ class HomeController extends Controller
     }
 
     public function venta($codigo){
+        $usuarios = User::all()->where('rol','user')->pluck('name','id');
         $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
-        return view('home.venta',compact('arreglo'));
+        return view('home.venta',compact('arreglo','usuarios'));
     }
 
     public function mostrador($codigo){
+        $usuarios = User::all()->where('rol','user')->pluck('name','id');
         $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
-        return view('home.mostrador',compact('arreglo'));
+        return view('home.mostrador',compact('arreglo','usuarios'));
     }
 
     public function pedido($codigo){
+        $usuarios = User::all()->where('rol','user')->pluck('name','id');
         $arreglo = My_Array::all()->firstWhere('Codigo',$codigo);
-        return view('home.pedido',compact('arreglo'));
+        return view('home.pedido',compact('arreglo','usuarios'));
     }
 
 
