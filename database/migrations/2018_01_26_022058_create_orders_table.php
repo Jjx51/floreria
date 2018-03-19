@@ -30,7 +30,7 @@ class CreateOrdersTable extends Migration
             $table->integer('Prioridad')->default(1);
             $table->integer('user_id')->unsigned(); 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->integer('status_id')->unsigned(); 
+            $table->integer('status_id')->unsigned()->default(1); 
             $table->foreign('status_id')->references('id')->on('status_orders')->onUpdate('cascade');
             $table->timestamps();
 
