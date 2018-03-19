@@ -16,7 +16,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('order.index');
+        $ordenes = Order::orderBy('created_at','ASC')->get();
+        return view('order.index',compact('ordenes'));
     }
 
     /**
@@ -103,6 +104,10 @@ class OrderController extends Controller
         
         return redirect('/inicio');
         //return redirect()-> route('Product.index')->with('danger','El inventario a cambiado');
+    }
+
+    public function indexrepartidor(){
+        return view('order.indexrepartidor');
     }
 
 }

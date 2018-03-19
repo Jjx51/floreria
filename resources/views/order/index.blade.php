@@ -13,11 +13,13 @@
 	@include('partials.alert')
     @include('partials.errors')
 
+@foreach ($ordenes as $ordene)
+	
     <div class="container borde-especial margen-inferior">
     	
   		<div class="row margen-superior">
   			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 " >
-			    <label class="margen-izquierdo letra20" >Arreglo: Flores de verano</label>
+			    <label class="margen-izquierdo letra20" >Arreglo: {{ $ordene->my_arrays }}</label>
             </div>
 
 			<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 " >
@@ -98,6 +100,7 @@
 		</div>
         </form>				
     </div>
+@endforeach
     
 
 
