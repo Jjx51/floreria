@@ -23,7 +23,7 @@ class Order extends Model
         'Florista',
         'Arreglo_status',
         'Repartidor',
-        'Order_status',
+        'Orden_status',
         'Entrega',
         'NotaEntrega'
     ];
@@ -34,20 +34,19 @@ class Order extends Model
         return $this -> belongsTo('App\My_Array','array_id','id');
     }
     
-    public function my_arrays(){
-        return $this->belongsToMany('App\My_Array','array_orders','array_id','order_id')->withPivot('Cantidad','pendientes','user_id','status_id');
-    } 
-
+    public function florista(){
+        return $this->belongsTo('App\User','Florista','id');
+    }
 
     public function repartidor(){
-        return $this->belongsTo('App\User','user_id','id');
+        return $this->belongsTo('App\User','Repartidor','id');
     }
 
-    public function status(){
-        return $this -> belongsTo('App\StatusOrder','status_id','id');
+    public function Orden_status(){
+        return $this -> belongsTo('App\StatusOrder','Orden_status','id');
     }
 
-    public function ordenes(){
-        return $this -> hasMany('App\ArrayOrder','order_id','id');
+    public function Array_status(){
+        return $this -> belongsTo('App\StatusArray','Arreglo_status','id');
     }
 }

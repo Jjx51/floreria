@@ -21,14 +21,11 @@
         </div>
 	</div>
 </div>
-	<div class="row row margen-superior margen-inferior">
-  			<div class="col-sm-offset-4 col-sm-4">
-			  	<a href="{{ route('Product.create') }}" class="btn btn-success btn-lg btn-block">Nueva Producto</a>
-		    </div>
+
 	<div class="container">
 		<div class="row row margen-superior margen-inferior">
 	  			<div class="col-sm-offset-4 col-sm-4 col-xs-offset-1 col-xs-10">
-				  	<a href="{{ route('Product.create') }}" class="btn btn-success btn-lg btn-block">Nuevo Producto</a>
+				  	<a href="{{ route('Product.create') }}" class="btn btn-default btn-lg btn-block">Nuevo Producto</a>
 			    </div>
 		</div>
 	</div>
@@ -47,6 +44,7 @@
 								<th class="text-center">Cantidad</th>
 								<th class="text-center">Merma</th>
 								<th class="text-center">Precio</th>
+								<th class="text-center">imagen</th>
 				                <th class="text-center">Acción 1</th>
 								<th class="text-center">Acción 2</th>
 				            </tr>
@@ -60,9 +58,17 @@
 									<td> {{ $product->Cantidad }}  </td>
 									<td> {{ $product->merma }}  </td>
 									<td> {{ $product->precio }}  </td>
+									<td> 
+										@if ($product->imagen)
+											<img  class='img-thumbnail' width="50" height="50" src="{{$product->imagen}}">		
+										@else
+											<img src="img/arreglos/sin-imagen.png" width="50" height="50" class='img-thumbnail'>
+										@endif
+									
+									</td>
 									<td>
 										<div class="form-group" align="center">
-									 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-primary">Editar</a> 
+									 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-default">Editar</a> 
 									 	</div>
 									</td>
 									 <td align="center">

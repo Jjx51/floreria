@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use App\Product;
 use App\CategoryProduct;
 use App\My_Array;
@@ -26,7 +26,11 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        if (Product::create($request->all())) {
+        if ($product = Product::create($request->all())) {
+            if ($request->file('imagen')){
+                $path =Storage::disk('public')->put('img/productos', $request->file('imagen'));
+                $product->fill(['imagen'=>asset($path)])->save();
+            }
             return redirect("/Product");
         } else {
             //configurar mensaje de que la categoria no se guardo en el sistema
@@ -55,11 +59,14 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = product::findOrFail($id);
-        $product->NombreProducto = $request->NombreProducto;
-        $product->category_id = $request->category_id;
-        $product->Cantidad = $request->Cantidad;
-        $product->merma = $request->merma;
-        $product->precio = $request->precio;
+        $borrar = $product->imagen;
+        $product->fill($request->all())->save();
+
+        if ($request->file('imagen')){
+            Storage::disk('public')->delete(substr($borrar,19));
+            $path =Storage::disk('public')->put('img/productos', $request->file('imagen'));
+            $product->fill(['imagen'=>asset($path)])->save();
+        }
         
         if ($product->save()) {
             return redirect("/Product");
@@ -76,6 +83,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        if(file_exists(public_path(substr(Product::findOrFail($id)->imagen,19)))){
+            Storage::disk('public')->delete(substr(Product::findOrFail($id)->imagen,19));
+        }
+
         Product::destroy($id);
         return redirect('/Product');
     }
@@ -92,6 +103,7 @@ class ProductController extends Controller
 
     public function descontar($id)
     {
+        
         $arreglo = My_Array::findOrFail($id);
         foreach ($arreglo->products as $product) {
             $idp = $product->id;
