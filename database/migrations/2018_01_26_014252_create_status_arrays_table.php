@@ -15,8 +15,7 @@ class CreateStatusArraysTable extends Migration
     {
         Schema::create('status_arrays', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('status');
-            $table->timestamps();
+            $table->string('status_array');
         });
     }
 
