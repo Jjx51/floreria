@@ -6,7 +6,18 @@
 					{{Form::label('Producto', 'Nombre del Producto')}}
 				</div>
 				<div class="col-sm-9 col-xs-12" ><br>
-					{{ Form::text('NombreProducto', $product->NombreProducto,['class'=>'form-control','placeholder'=>'Nombre del producto'])}}
+					{{ Form::text('Nombre', $product->Nombre,['class'=>'form-control','placeholder'=>'Nombre del producto'])}}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group" align="center">
+				<div class="col-sm-3 col-xs-12"><br>
+					{{Form::label('codigo', 'codigo')}}
+				</div>
+				<div class="col-sm-9 col-xs-12" ><br>
+					{{ Form::text('Codigo', $product->Codigo,['class'=>'form-control','placeholder'=>'Nombre del producto'])}}
 				</div>
 			</div>
 		</div>

@@ -22,4 +22,10 @@ class My_Array extends Model
         return $this -> hasMany('App\ArrayOrder','array_id','id');
     }
 
+    public function action()
+    {
+        return $this->morphMany('App\Actions', 'actionable');
+    }
+
+
 }

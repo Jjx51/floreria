@@ -13,737 +13,633 @@ class ProductSeeder extends Seeder
     public function run()
     {
         Product::create([
-            'NombreProducto'=>'Tallo de Alstromelia',
+            'Nombre'=>'Tallo de Alstromelia',
+            'Codigo'=> '1',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
 
         Product::create([
-            'NombreProducto'=>'Ave De Paraiso',
+            'Nombre'=>'Ave De Paraiso',
+            'Codigo'=> '2',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
 
         Product::create([
-            'NombreProducto'=>'Argenia',
+            'Nombre'=>'Argenia',
+            'Codigo'=> '3',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
 
         Product::create([
-            'NombreProducto'=>'Amaranto',
+            'Nombre'=>'Amaranto',
+            'Codigo'=> '4',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Anturio',
+            'Nombre'=>'Anturio',
+            'Codigo'=> '5',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Bombi',
+            'Nombre'=>'Bombi',
+            'Codigo'=> '6',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Casa Blanca',
+            'Nombre'=>'Casa Blanca',
+            'Codigo'=> '7',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Acapulco o Marlo',
+            'Nombre'=>'Acapulco o Marlo',
+            'Codigo'=> '8',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Crasperia',
+            'Nombre'=>'Crasperia',
+            'Codigo'=> '9',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Flor de Col',
+            'Nombre'=>'Flor de Col',
+            'Codigo'=> '10',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Dalia',
+            'Nombre'=>'Dalia',
+            'Codigo'=> '11',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Clavel Fucsia',
+            'Nombre'=>'Tallo de Clavel Fucsia',
+            'Codigo'=> '12',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gerbera',
+            'Nombre'=>'Gerbera',
+            'Codigo'=> '13',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Girasol',
+            'Nombre'=>'Girasol',
+            'Codigo'=> '14',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Estati Espuma',
+            'Nombre'=>'Tallo de Estati Espuma',
+            'Codigo'=> '15',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Espuela',
+            'Nombre'=>'Espuela',
+            'Codigo'=> '16',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gladiola',
+            'Nombre'=>'Gladiola',
+            'Codigo'=> '17',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Delfinio',
+            'Nombre'=>'Delfinio',
+            'Codigo'=> '18',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Limonada',
+            'Nombre'=>'Limonada',
+            'Codigo'=> '19',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Baby Breath',
+            'Nombre'=>'Baby Breath',
+            'Codigo'=> '20',
             'category_id' => 3,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Eliconia',
+            'Nombre'=>'Eliconia',
+            'Codigo'=> '21',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Imperio',
+            'Nombre'=>'Imperio',
+            'Codigo'=> '22',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Liatrix',
+            'Nombre'=>'Tallo de Liatrix',
+            'Codigo'=> '23',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Hortencia Verde',
+            'Nombre'=>'Tallo de Hortencia Verde',
+            'Codigo'=> '24',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Lili',
+            'Nombre'=>'Lili',
+            'Codigo'=> '25',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Iris',
+            'Nombre'=>'Iris',
+            'Codigo'=> '26',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Liciantus',
+            'Nombre'=>'Liciantus',
+            'Codigo'=> '27',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Marcagita Amarilla',
+            'Nombre'=>'Marcagita Amarilla',
+            'Codigo'=> '28',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Mini Rosa Rosa',
+            'Nombre'=>'Tallo de Mini Rosa Rosa',
+            'Codigo'=> '29',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Mini Clavel',
+            'Nombre'=>'Mini Clavel',
+            'Codigo'=> '30',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Moreliana',
+            'Nombre'=>'Moreliana',
+            'Codigo'=> '31',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Orquidea',
+            'Nombre'=>'Orquidea',
+            'Codigo'=> '32',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Perrito',
+            'Nombre'=>'Perrito',
+            'Codigo'=> '33',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosas',
+            'Nombre'=>'Rosas',
+            'Codigo'=> '34',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tulipanes',
+            'Nombre'=>'Tulipanes',
+            'Codigo'=> '35',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
 
         Product::create([
-            'NombreProducto'=>'Tallo de Yoko',
+            'Nombre'=>'Tallo de Yoko',
+            'Codigo'=> '36',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Alelia',
+            'Nombre'=>'Alelia',
+            'Codigo'=> '37',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Alcatraz',
+            'Nombre'=>'Alcatraz',
+            'Codigo'=> '38',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Estate(Pintado)',
+            'Nombre'=>'Estate(Pintado)',
+            'Codigo'=> '39',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Briantus',
+            'Nombre'=>'Briantus',
+            'Codigo'=> '40',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Belo de Novia',
+            'Nombre'=>'Belo de Novia',
+            'Codigo'=> '41',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         
         Product::create([
-            'NombreProducto'=>'Rosa Fucsia',
+            'Nombre'=>'Rosa Fucsia',
+            'Codigo'=> '42',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
 
         Product::create([
-            'NombreProducto'=>'Tallo de Clavelina Blanca',
+            'Nombre'=>'Tallo de Clavelina Blanca',
+            'Codigo'=> '43',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosa Hermosa (Rosita)',
+            'Nombre'=>'Rosa Hermosa (Rosita)',
+            'Codigo'=> '44',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Miller',
+            'Nombre'=>'Tallo de Miller',
+            'Codigo'=> '45',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Clavo',
+            'Nombre'=>'Clavo',
+            'Codigo'=> '46',
             'category_id' => 3,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosas Lila',
+            'Nombre'=>'Rosas Lila',
+            'Codigo'=> '47',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosas Amarillas Canario',
+            'Nombre'=>'Rosas Amarillas Canario',
+            'Codigo'=> '48',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de campana',
+            'Nombre'=>'Tallo de campana',
+            'Codigo'=> '49',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gerbera Roja',
+            'Nombre'=>'Gerbera Roja',
+            'Codigo'=> '50',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Ruscus',
+            'Nombre'=>'Tallo de Ruscus',
+            'Codigo'=> '51',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosas Blancas',
+            'Nombre'=>'Rosas Blancas',
+            'Codigo'=> '52',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gerbera Fucsia',
+            'Nombre'=>'Gerbera Fucsia',
+            'Codigo'=> '53',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gerbera Rosita',
+            'Nombre'=>'Gerbera Rosita',
+            'Codigo'=> '54',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Gerbera Amarillas',
+            'Nombre'=>'Gerbera Amarillas',
+            'Codigo'=> '55',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Alstromelia Blanca',
+            'Nombre'=>'Alstromelia Blanca',
+            'Codigo'=> '56',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Ruscus',
+            'Nombre'=>'Ruscus',
+            'Codigo'=> '57',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Alstromelia Fucsia',
+            'Nombre'=>'Alstromelia Fucsia',
+            'Codigo'=> '58',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Alstromelia Fucsia',
+            'Nombre'=>'Tallo de Alstromelia Fucsia',
+            'Codigo'=> '59',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de lili Blanca',
+            'Nombre'=>'Tallo de lili Blanca',
+            'Codigo'=> '60',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Rosa Amarilla Canario',
+            'Nombre'=>'Tallo de Rosa Amarilla Canario',
+            'Codigo'=> '61',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Rosa Fucsia',
+            'Nombre'=>'Tallo de Rosa Fucsia',
+            'Codigo'=> '62',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Alstromelia Morada',
+            'Nombre'=>'Tallo de Alstromelia Morada',
+            'Codigo'=> '63',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Argentina Blanca',
+            'Nombre'=>'Tallo de Argentina Blanca',
+            'Codigo'=> '64',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Margarita Amarila',
+            'Nombre'=>'Tallo de Margarita Amarila',
+            'Codigo'=> '65',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Gerbera Fucsia',
+            'Nombre'=>'Tallo de Gerbera Fucsia',
+            'Codigo'=> '66',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Alstromelia Blanca',
+            'Nombre'=>'Tallo de Alstromelia Blanca',
+            'Codigo'=> '67',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Piñanona o Amuena',
+            'Nombre'=>'Tallo de Piñanona o Amuena',
+            'Codigo'=> '68',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Rosa Hermosa (Rosita)',
+            'Nombre'=>'Tallo de Rosa Hermosa (Rosita)',
+            'Codigo'=> '69',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Girasol',
+            'Nombre'=>'Tallo de Girasol',
+            'Codigo'=> '70',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Gerbera Amarilla',
+            'Nombre'=>'Tallo de Gerbera Amarilla',
+            'Codigo'=> '71',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Iris',
+            'Nombre'=>'Tallo de Iris',
+            'Codigo'=> '72',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo de Rosa Roja',
+            'Nombre'=>'Tallo de Rosa Roja',
+            'Codigo'=> '73',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Rosa Roja',
+            'Nombre'=>'Rosa Roja',
+            'Codigo'=> '74',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Campana',
+            'Nombre'=>'Campana',
+            'Codigo'=> '75',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tallo deGErbera',
+            'Nombre'=>'Tallo deGErbera',
+            'Codigo'=> '76',
             'category_id' => 2,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Maiceras',
+            'Nombre'=>'Maiceras',
+            'Codigo'=> '77',
             'category_id' => 1,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja de madera Negra',
+            'Nombre'=>'Caja de madera Negra',
+            'Codigo'=> '78',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja de Madera Blanca',
+            'Nombre'=>'Caja de Madera Blanca',
+            'Codigo'=> '79',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja de Madera 20x20',
+            'Nombre'=>'Caja de Madera 20x20',
+            'Codigo'=> '80',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja de Madera 15x100 rosita',
+            'Nombre'=>'Caja de Madera 15x100 rosita',
+            'Codigo'=> '81',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Cajon Vintage 25x23',
+            'Nombre'=>'Cajon Vintage 25x23',
+            'Codigo'=> '82',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Jardinera 28x15',
+            'Nombre'=>'Jardinera 28x15',
+            'Codigo'=> '83',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Florero med 9300',
+            'Nombre'=>'Florero med 9300',
+            'Codigo'=> '84',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Florero ch 214 s',
+            'Nombre'=>'Florero ch 214 s',
+            'Codigo'=> '85',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Florero med Mitra',
+            'Nombre'=>'Florero med Mitra',
+            'Codigo'=> '86',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Taza Ceramica Med',
+            'Nombre'=>'Taza Ceramica Med',
+            'Codigo'=> '87',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja Negra Cuadrada 20x20',
+            'Nombre'=>'Caja Negra Cuadrada 20x20',
+            'Codigo'=> '88',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Charolita Verde Med',
+            'Nombre'=>'Charolita Verde Med',
+            'Codigo'=> '89',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Cilindro Ceramica 32 cm',
+            'Nombre'=>'Cilindro Ceramica 32 cm',
+            'Codigo'=> '90',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Cuadrado Ceramica 30 cm',
+            'Nombre'=>'Cuadrado Ceramica 30 cm',
+            'Codigo'=> '91',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Cilindro Cristal ch 15 cm',
+            'Nombre'=>'Cilindro Cristal ch 15 cm',
+            'Codigo'=> '92',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Caja de Madera 1mtx25',
+            'Nombre'=>'Caja de Madera 1mtx25',
+            'Codigo'=> '93',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Baul Mediano de Madera',
+            'Nombre'=>'Baul Mediano de Madera',
+            'Codigo'=> '94',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Charola Verde Grande',
+            'Nombre'=>'Charola Verde Grande',
+            'Codigo'=> '95',
             'category_id' => 4,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Tarjeta Marca',
+            'Nombre'=>'Tarjeta Marca',
+            'Codigo'=> '96',
             'category_id' => 7,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Brillo',
+            'Nombre'=>'Brillo',
+            'Codigo'=> '97',
             'category_id' => 7,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Malla Roja',
+            'Nombre'=>'Malla Roja',
+            'Codigo'=> '98',
             'category_id' => 5,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Malla Fucsia',
+            'Nombre'=>'Malla Fucsia',
+            'Codigo'=> '99',
             'category_id' => 5,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Celofan',
+            'Nombre'=>'Celofan',
+            'Codigo'=> '100',
             'category_id' => 5,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Cristal Clian',
+            'Nombre'=>'Cristal Clian',
+            'Codigo'=> '101',
             'category_id' => 7,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Satinado Rojo',
+            'Nombre'=>'Satinado Rojo',
+            'Codigo'=> '102',
             'category_id' => 6,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'Satinado Fucsia',
+            'Nombre'=>'Satinado Fucsia',
+            'Codigo'=> '103',
             'category_id' => 6,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
         Product::create([
-            'NombreProducto'=>'SAtinado Blanco',
+            'Nombre'=>'SAtinado Blanco',
+            'Codigo'=> '104',
             'category_id' => 6,
-            'Cantidad' => 100,
-            'merma' => 0,
             'precio' => 100
         ]);
     }

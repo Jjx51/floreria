@@ -18,9 +18,8 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('category_products')->onupdate('cascade')->onDelete('cascade');
-            $table->string('NombreProducto')->unique();
-            $table->float('Cantidad', 8, 2);
-            $table->integer('merma');
+            $table->string('Codigo',10)->unique();
+            $table->string('Nombre',30)->unique();
             $table->float('precio', 8, 2);
             $table->string('imagen',128)->nullable();
             $table->timestamps();

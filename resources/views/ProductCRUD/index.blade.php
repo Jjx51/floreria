@@ -41,8 +41,6 @@
 				                <th class="text-center">N°</th>
 				                <th class="text-center">Nombre</th>
 								<th class="text-center">Categoria</th>
-								<th class="text-center">Cantidad</th>
-								<th class="text-center">Merma</th>
 								<th class="text-center">Precio</th>
 								<th class="text-center">imagen</th>
 				                <th class="text-center">Acción 1</th>
@@ -53,10 +51,8 @@
 							@foreach ($products as $product)
 								<tr>
 									<td> {{ $product->id }} </td>
-									<td> {{ $product->NombreProducto }}  </td>
+									<td> {{ $product->Nombre }}  </td>
 									<td> {{ $product->Category->name }}  </td>
-									<td> {{ $product->Cantidad }}  </td>
-									<td> {{ $product->merma }}  </td>
 									<td> {{ $product->precio }}  </td>
 									<td> 
 										@if ($product->imagen)
@@ -64,7 +60,6 @@
 										@else
 											<img src="img/arreglos/sin-imagen.png" width="50" height="50" class='img-thumbnail'>
 										@endif
-									
 									</td>
 									<td>
 										<div class="form-group" align="center">

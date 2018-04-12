@@ -35,10 +35,9 @@ class ProductController extends Controller
         } else {
             //configurar mensaje de que la categoria no se guardo en el sistema
             $product  = new Product;
-            $product->NombreProducto = $request->NombreProducto;
+            $product->Nombre = $request->Nombre;
+            $product->Codigo = $request->Codigo;
             $product->category_id = $request->category_id;
-            $product->Cantidad = $request->Cantidad;
-            $product->merma = 0;
             $product->precio = $request->precio;
             return view("/ProductCRUD.create",["product" => $product]);
         }
