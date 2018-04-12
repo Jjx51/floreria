@@ -16,10 +16,10 @@ El usuario florista cuenta con una vista donde van a aparecer todas los arreglos
 
 **Repartidor**
 La vista de repartidor cuenta con 3 bloques: 
-* Bloque 1 : 
-* Bloque 2 :
-* Bloque 3 :
-**Nota:** Pendiente los horarios de los bloques.
+* Bloque 1 : 8:00 - 12:00
+* Bloque 2 : 12:00 - 16:00
+* Bloque 3 : 16:00 -m20:00
+
 Se crea de esta forma para una mayor gestión y priorizar de la entrega de los pedidos excepto aquellos que sean especiales que de la misma forma serán marcados con el color amarillo para distinguirlos.
 El repartidor podrá ir cambiando los estados de los pedidos para que los demás usuarios del sistema sepan como va la entrega de los pedidos.En caso de no poder ser entregado un arreglo entonces se marcara como "Entrega fallida" y se abrirá un cuadro de dialogo para dejar una nota.
 Al final del día los arreglos desaparecerán de los bloques excepto los que son especiales que aun no han sido entregados y los que están marcados como entregas fallidas.

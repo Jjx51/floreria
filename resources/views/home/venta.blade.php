@@ -38,8 +38,17 @@
 				<a href="{{ route('inicio') }}" type="button" class="btn btn-default btn-block margen-inferior">Cancelar</a>
 		    </div>
 			
+
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 ">
-				<button type="button" class="btn btn-default btn-block margen-inferior">Añadir</button>
+			{!! Form::open(['url'=> '/Product/descontar/'. $arreglo->id, 'method'=> 'PUT','class'=>'form-group ','before' => 'csrf']) !!}
+<div>
+
+
+		<input type="submit" value="Agregar" class="btn btn-default btn-block margen-inferior">
+</div>
+{!! Form::close() !!}
+			
+				
 			</div>
 		</div>	
 	</div>
