@@ -63,6 +63,10 @@
 									</td>
 									<td>
 										<div class="form-group" align="center">
+									 		<a href="{{url('/Product/'.$product->id)}}" class="btn btn-default">show</a> 
+									 	</div>
+
+										<div class="form-group" align="center">
 									 		<a href="{{url('/Product/'.$product->id.'/edit')}}" class="btn btn-default">Editar</a> 
 									 	</div>
 									</td>

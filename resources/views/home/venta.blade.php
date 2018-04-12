@@ -21,10 +21,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($arreglo->products as $producto)
+						@foreach ($arreglo->products as $product)
 							<tr>
-								<td>{{$producto->NombreProducto }}</td>
-								<td align="center">{{$producto->pivot->Cantidad }}</td>
+								<td>{{$product->Nombre }}</td>
+								<td align="center">{{$product->pivot->Cantidad }}</td>
 							</tr>
 						@endforeach
 					</tbody>
@@ -97,10 +97,16 @@
 							</tr>
 					</tbody>
 				</table>
+				<div class="form-group">
 					{{Form::label('Cantidadl', 'Cantidad')}}
 					{{Form::text('cantidad', null, ['class'=>'form-control','placeholder'=>'Cantidad de arreglos'])}}
+				</div>
+				<br>
+				<div class="form-group">
+				
 					{{Form::label('personl', 'Seleccionar personal')}}
-					{{Form::select('user_id', $usuarios, ['class'=>'form-control']) }}
+					{{Form::select('user_id', $usuarios, ['class'=>'form-control ']) }}
+				</div>
 					{{Form::hidden('product_id',$producto->id)}}
 			</div>
 
